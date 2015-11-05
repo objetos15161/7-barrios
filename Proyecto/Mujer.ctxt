@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment0.text=\r\n\ Se\ define\ hacia\ donde\ da\ los\ pasos\ y\ las\ imagenes\ se\ cambian\ para\r\n\ simular\ que\ el\ personaje\ esta\ en\ movimiento\r\n
+comment1.params=distance
+comment1.target=void\ walkLeft(int)
+comment2.params=distance
+comment2.target=void\ walkRight(int)
+comment3.params=distance
+comment3.target=void\ walkUp(int)
+comment4.params=distance
+comment4.target=void\ walkDown(int)
+comment5.params=distance\ direction\ img1\ img2
+comment5.target=void\ walkL(int,\ int,\ java.lang.String,\ java.lang.String)
+comment6.params=distance\ direction\ img1\ img2
+comment6.target=void\ walkR(int,\ int,\ java.lang.String,\ java.lang.String)
+comment7.params=distance\ direction\ img1\ img2
+comment7.target=void\ walkUp(int,\ int,\ java.lang.String,\ java.lang.String)
+comment8.params=distance\ direction\ img1\ img2
+comment8.target=void\ walkDown(int,\ int,\ java.lang.String,\ java.lang.String)
+numComments=9

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ act()
+comment0.text=\r\n\ Act\ -\ do\ whatever\ the\ Gato\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.params=distance\ direction\ img1\ img2
+comment1.target=void\ walkL(int,\ int,\ java.lang.String,\ java.lang.String)
+comment2.params=distance\ direction\ img1\ img2
+comment2.target=void\ walkR(int,\ int,\ java.lang.String,\ java.lang.String)
+comment3.params=distance\ direction\ img1\ img2
+comment3.target=void\ walkUp(int,\ int,\ java.lang.String,\ java.lang.String)
+comment4.params=distance\ direction\ img1\ img2
+comment4.target=void\ walkDown(int,\ int,\ java.lang.String,\ java.lang.String)
+numComments=5
