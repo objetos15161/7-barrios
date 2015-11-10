@@ -1,16 +1,16 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Perro here.
+ * Permite el movimiento autonomo del personaje
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @cesar4206 (Castro Pérez César) 
+ * @version (10-11-15)
  */
-public class Perro extends Animales
+public class Perro extends Animal
 {
     /**
-     * Act - do whatever the Perro wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Genera numeros aleatorios para darle valores al movimiento y a la
+     * direccion del movimiento, en diferente orden     
      */
     public void act() 
     {
@@ -19,19 +19,19 @@ public class Perro extends Animales
         
        if(num==0)
        {
-           walkL(aux, -1, "PerroLeft1.png", "PerroLeft2.png");
+           walkL(aux, -1, "Exterior/PerroLeft1.png", "Exterior/PerroLeft2.png");
        }
        if(num==25)
        {
-            walkR(aux, 1, "PerroRight1.png", "PerroRight2.png");
+            walkR(aux, 1, "Exterior/PerroRight1.png", "Exterior/PerroRight2.png");
        }
        if(num==50)
        {
-            walkUp(aux, -1, "PerroUp1.png", "PerroUp2.png");
+            walkUp(aux, -1, "Exterior/PerroUp1.png", "Exterior/PerroUp2.png");
        }
        if(num==100)
        {
-            walkDown(aux, 1, "PerroDown1.png", "PerroDown2.png");            
+            walkDown(aux, 1, "Exterior/PerroDown1.png", "Exterior/PerroDown2.png");            
        }       
     }    
       
@@ -46,7 +46,7 @@ public class Perro extends Animales
             wait(6);
             setLocation(getX() + direction, getY());
         }
-        setImage("PerroLeftStop.png");
+        setImage("Exterior/PerroLeftStop.png");
     }
     
     private void walkR(int distance, int direction, String img1, String img2)
@@ -60,7 +60,7 @@ public class Perro extends Animales
             wait(6);
             setLocation(getX() + direction, getY());
         }
-        setImage("PerroRightStop.png");
+        setImage("Exterior/PerroRightStop.png");
     }
     
     private void walkUp(int distance, int direction, String img1, String img2)
@@ -74,7 +74,7 @@ public class Perro extends Animales
             wait(6);
             setLocation(getX() , getY() + direction);
         }
-        setImage("PerroUpStop.png");
+        setImage("Exterior/PerroUpStop.png");
     }
     
     private void walkDown(int distance, int direction, String img1, String img2)
@@ -88,7 +88,7 @@ public class Perro extends Animales
             wait(6);
             setLocation(getX() , getY() + direction);
         }
-        setImage("PerroDownStop.png");
+        setImage("Exterior/PerroDownStop.png");
         Greenfoot.playSound("Dog.wav");
     }    
 }

@@ -1,16 +1,18 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Hombre here.
+ * Esta clase define la distancia que recorre el personaje
+ * asi como las imagenes del personaje
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @cesar4206 (Castro Pérez César) 
+ * @version (10-11-15)
  */
 public class Hombre extends Jugador
 {
     /**
      * Se define hacia donde da los pasos y las imagenes se cambian para
-     * simular que el personaje esta en movimiento
+     * simular que el personaje esta en movimiento dependiendo la tecla 
+     * que se oprima
      */
     public void act() 
     {
@@ -19,22 +21,22 @@ public class Hombre extends Jugador
     
     public void walkLeft(int distance)
     {
-        walkL(distance, -1, "MaleLeft1.png", "MaleLeft2.png");
+        walkL(distance, -1, "Personajes/MaleLeft1.png", "Personajes/MaleLeft2.png");
     }
     
     public void walkRight(int distance)
     {
-        walkR(distance, 1, "MaleRight1.png", "MaleRight2.png");
+        walkR(distance, 1, "Personajes/MaleRight1.png", "Personajes/MaleRight2.png");
     }
     
     public void walkUp(int distance)
     {
-        walkUp(distance, -1, "MaleUp1.png", "MaleUp2.png");
+        walkUp(distance, -1, "Personajes/MaleUp1.png", "Personajes/MaleUp2.png");
     }
     
     public void walkDown(int distance)
     {
-        walkDown(distance, 1, "MaleDown1.png", "MaleDown2.png");
+        walkDown(distance, 1, "Personajes/MaleDown1.png", "Personajes/MaleDown2.png");
     }
     
     private void walkL(int distance, int direction, String img1, String img2)
@@ -48,7 +50,7 @@ public class Hombre extends Jugador
             wait(6);
             setLocation(getX() + direction, getY());
         }
-        setImage("MaleLeftStop.png");
+        setImage("Personajes/MaleLeftStop.png");
     }
     
     private void walkR(int distance, int direction, String img1, String img2)
@@ -62,7 +64,7 @@ public class Hombre extends Jugador
             wait(6);
             setLocation(getX() + direction, getY());
         }
-        setImage("MaleRightStop.png");
+        setImage("Personajes/MaleRightStop.png");
     }
     
     private void walkUp(int distance, int direction, String img1, String img2)
@@ -76,7 +78,7 @@ public class Hombre extends Jugador
             wait(6);
             setLocation(getX() , getY() + direction);
         }
-        setImage("MaleUpStop.png");
+        setImage("Personajes/MaleUpStop.png");
     }
     
     private void walkDown(int distance, int direction, String img1, String img2)
@@ -90,7 +92,7 @@ public class Hombre extends Jugador
             wait(6);
             setLocation(getX() , getY() + direction);
         }
-        setImage("MaleDownStop.png");
+        setImage("Personajes/MaleDownStop.png");
     }
     
 }

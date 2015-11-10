@@ -21,30 +21,30 @@ public class Chimenea extends Escenario
     {
         for (int i=0; i<100; i++) 
         {                 
-            setImage("chimenea2.png");
+            setImage("Residencia/chimenea2.png");
             wait(5);
-            setImage("chimenea3.png");
+            setImage("Residencia/chimenea3.png");
             wait(5);
-            setImage("chimenea4.png");
+            setImage("Residencia/chimenea4.png");
             wait(5);
-            setImage("chimenea5.png");
+            setImage("Residencia/chimenea5.png");
             wait(5);
-            setImage("chimenea6.png");
+            setImage("Residencia/chimenea6.png");
             wait(5);
-            setImage("chimenea7.png");
+            setImage("Residencia/chimenea7.png");
             wait(5);
-            setImage("chimenea8.png");
+            setImage("Residencia/chimenea8.png");
             wait(5);
-            setImage("chimenea9.png");
+            setImage("Residencia/chimenea9.png");
             wait(5);
-            setImage("chimenea10.png");
+            setImage("Residencia/chimenea10.png");
             wait(5);
-            setImage("chimenea11.png");
+            setImage("Residencia/chimenea11.png");
             wait(5);
-            setImage("chimenea12.png");
+            setImage("Residencia/chimenea12.png");
             wait(5);  
         }
-        setImage("chimenea1.png");
+        setImage("Residencia/chimenea1.png");
     }
     
    

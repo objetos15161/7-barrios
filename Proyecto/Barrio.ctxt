@@ -1,11 +1,14 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Barrio()
-comment0.text=\ \ \ \ \ \r\n
+comment0.text=\ \ \r\n\ Se\ llaman\ las\ funciones\ que\ se\ utilizaran\ en\ el\ transcurso\ del\ juego\r\n
 comment1.params=
 comment1.target=void\ Inicio()
+comment1.text=\ \ \r\n\ Funcion\ que\ inserta\ una\ imagen\ de\ fondo\ y\ llama\ a\ la\ funcion\ para\ la\ \r\n\ seleccion\ de\ personaje\r\n
 comment2.params=
 comment2.target=void\ seleccionPersonaje()
+comment2.text=\ \ \r\n\ Funcion\ que\ muestra\ los\ personajes\ que\ pudes\ seleccionar\ para\ empezar\ a\ jugar\r\n
 comment3.params=n
 comment3.target=void\ creaNivel(int)
+comment3.text=\ \ \r\n\ Funcion\ que\ crea\ los\ niveles\ del\ juego\r\n
 numComments=4

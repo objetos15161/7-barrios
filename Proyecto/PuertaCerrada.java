@@ -14,6 +14,6 @@ public class PuertaCerrada extends Puerta
      */
     public void act() 
     {
-        // Add your action code here.
+       setImage("Residencia/PuertaCerrada.png");
     }    
 }

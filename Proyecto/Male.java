@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Male here.
+ * Verifica que tecla se oprime para darle movimiento
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @cesar4206 (Castro Pérez César) 
+ * @version (10-11-15)
  */
 public class Male extends Hombre
 {
