@@ -9,16 +9,40 @@ import greenfoot.*;
  */
 public class Hombre extends Jugador
 {
+    private Counter lvl;
+    private Counter vidas;
+    public Hombre hombre;
+    public Mujer mujer;
+    public Perro perro;
+    public Gato gato;
+    public Male male;
+    
     /**
      * Se define hacia donde da los pasos y las imagenes se cambian para
-     * simular que el personaje esta en movimiento dependiendo la tecla 
-     * que se oprima
+     * simular que el personaje esta en movimiento
      */
     public void act() 
     {
-        // Add your action code here.
+        World mundo = (Barrio)getWorld();      
+        Actor mujer = getOneIntersectingObject(Mujer.class);
+      if(Greenfoot.getMouseInfo()!=null)
+        {
+           if(Greenfoot.mousePressed(this))
+           {
+             /*creaNivel(lvl.getValue()); 
+             lvl.add(1);*/
+             
+             mundo.removeObject(this);
+             mundo.removeObject(mujer);
+             mundo.addObject(new Male(), Greenfoot.getRandomNumber(mundo.getWidth()) ,Greenfoot.getRandomNumber(mundo.getHeight()));
+           }
+           if(Greenfoot.mousePressed(mujer))
+           {
+              /*creaNivel(lvl.getValue()); 
+              lvl.add(1);*/
+           }
+        }     
     }
-    
     public void walkLeft(int distance)
     {
         walkL(distance, -1, "Personajes/MaleLeft1.png", "Personajes/MaleLeft2.png");

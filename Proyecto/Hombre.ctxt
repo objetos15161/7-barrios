@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-comment0.text=\r\n\ Se\ define\ hacia\ donde\ da\ los\ pasos\ y\ las\ imagenes\ se\ cambian\ para\r\n\ simular\ que\ el\ personaje\ esta\ en\ movimiento\ dependiendo\ la\ tecla\ \r\n\ que\ se\ oprima\r\n
+comment0.text=\r\n\ Se\ define\ hacia\ donde\ da\ los\ pasos\ y\ las\ imagenes\ se\ cambian\ para\r\n\ simular\ que\ el\ personaje\ esta\ en\ movimiento\r\n
 comment1.params=distance
 comment1.target=void\ walkLeft(int)
 comment2.params=distance
