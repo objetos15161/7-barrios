@@ -40,6 +40,7 @@ public class Hombre extends Jugador
            {
               /*creaNivel(lvl.getValue()); 
               lvl.add(1);*/
+              mundo.removeObject(this);
            }
         }     
     }

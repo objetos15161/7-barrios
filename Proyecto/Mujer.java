@@ -18,25 +18,25 @@ public class Mujer extends Jugador
     public void act() 
     {
          World mundo = (Barrio)getWorld();      
-       hombre = new Hombre();
+       
       if(Greenfoot.getMouseInfo()!=null)
         {
-           if(Greenfoot.mousePressed(this))
-           {
+        if(Greenfoot.mousePressed(this))
+          {
              /*creaNivel(lvl.getValue()); 
-             lvl.add(1);*/
-             
-             mundo.removeObject(this);
-             mundo.removeObject(hombre);
+             lvl.add(1);*/             
+             mundo.removeObject(this);             
              mundo.addObject(new Female(), Greenfoot.getRandomNumber(mundo.getWidth()) ,Greenfoot.getRandomNumber(mundo.getHeight()));
-           }
-           /*if(Greenfoot.mousePressed())
+        }
+           if(Greenfoot.mousePressed(hombre))
            {
               /*creaNivel(lvl.getValue()); 
               lvl.add(1);
            } */
+           mundo.removeObject(this);
         }     
     }
+   }
     public void walkLeft(int distance)
     {
         walkL(distance, -1, "Personajes/FemaleLeft1.png", "Personajes/FemaleLeft2.png");
