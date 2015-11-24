@@ -16,6 +16,7 @@ public class Hombre extends Jugador
     public Perro perro;
     public Gato gato;
     public Male male;
+    public int personaje;
     
     /**
      * Se define hacia donde da los pasos y las imagenes se cambian para
@@ -25,22 +26,27 @@ public class Hombre extends Jugador
     {
         World mundo = (Barrio)getWorld();      
         Actor mujer = getOneIntersectingObject(Mujer.class);
-      if(Greenfoot.getMouseInfo()!=null)
+     if(Greenfoot.getMouseInfo()!=null)
         {
-           if(Greenfoot.mousePressed(this))
+          if(Greenfoot.mousePressed(this))
            {
              /*creaNivel(lvl.getValue()); 
              lvl.add(1);*/
-             
-             mundo.removeObject(this);
-             mundo.removeObject(mujer);
-             mundo.addObject(new Male(), Greenfoot.getRandomNumber(mundo.getWidth()) ,Greenfoot.getRandomNumber(mundo.getHeight()));
-           }
+             //mundo.removeObject(this);
+             //mundo.removeObject(mujer);
+             personaje=1;
+             //mundo.addObject(new SanSebastian(),300,300);
+             Greenfoot.setWorld(new San_Sebastian()); 
+             //mundo.addObject(new Male(), Greenfoot.getRandomNumber(mundo.getWidth()) ,Greenfoot.getRandomNumber(mundo.getHeight()));   
+          }
            if(Greenfoot.mousePressed(mujer))
            {
               /*creaNivel(lvl.getValue()); 
               lvl.add(1);*/
-              mundo.removeObject(this);
+              //mundo.removeObject(this);
+              personaje=2;
+              //mundo.addObject(new SanSebastian(),300,300);
+              Greenfoot.setWorld(new San_Sebastian()); 
            }
         }     
     }
@@ -69,10 +75,10 @@ public class Hombre extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(6);
+            wait(3);
             setLocation(getX() + direction, getY());
             setImage(img2);
-            wait(6);
+            wait(3);
             setLocation(getX() + direction, getY());
         }
         setImage("Personajes/MaleLeftStop.png");
@@ -83,10 +89,10 @@ public class Hombre extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(6);
+            wait(3);
             setLocation(getX() + direction, getY());
             setImage(img2);
-            wait(6);
+            wait(3);
             setLocation(getX() + direction, getY());
         }
         setImage("Personajes/MaleRightStop.png");
@@ -97,10 +103,10 @@ public class Hombre extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(6);
+            wait(3);
             setLocation(getX() , getY() + direction);
             setImage(img2);
-            wait(6);
+            wait(3);
             setLocation(getX() , getY() + direction);
         }
         setImage("Personajes/MaleUpStop.png");
@@ -111,10 +117,10 @@ public class Hombre extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(6);
+            wait(3);
             setLocation(getX() , getY() + direction);
             setImage(img2);
-            wait(6);
+            wait(3);
             setLocation(getX() , getY() + direction);
         }
         setImage("Personajes/MaleDownStop.png");

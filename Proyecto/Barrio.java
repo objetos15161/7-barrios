@@ -26,16 +26,17 @@ public class Barrio extends World
     {            
         super(580, 444, 1); 
         Greenfoot.setWorld(new Menu());
-       
+              
         lvl = new Counter("Nivel: ");
         lvl.setValue(0);
         super.setBackground("Clouds.png"); 
                    
-         hombre = new Hombre();
+        /*hombre = new Hombre();
         addObject(hombre, (getWidth()/3), (getHeight()/2));
         mujer = new Mujer();
         addObject(mujer, (super.getWidth()/3)+super.getWidth()/3, (super.getHeight()/2));
-      
+      */
+     
    }
     
     public void Inicio()
@@ -58,19 +59,24 @@ public class Barrio extends World
             
         if(Greenfoot.getMouseInfo()!=null)
         {
-           if(Greenfoot.mouseClicked(hombre))
+           if(Greenfoot.mousePressed(hombre))
            {
-             lvl.add(1);
-             this.creaNivel(lvl.getValue()); 
+             //lvl.add(1);
+             //this.creaNivel(lvl.getValue()); 
+             Greenfoot.setWorld(new San_Sebastian()); 
            }
            if(Greenfoot.mousePressed(mujer))
            {
-              this.creaNivel(lvl.getValue()); 
-              lvl.add(1);
+              //this.creaNivel(lvl.getValue()); 
+              //lvl.add(1);
+              Greenfoot.setWorld(new San_Sebastian()); 
            }
         }     
     }
-    
+    public Mujer dimeMujer()
+    {
+        return mujer;
+    }
     public void creaNivel(int n)
     {
         switch(n)

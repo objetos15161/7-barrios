@@ -8,8 +8,8 @@ import greenfoot.*;
  */
 public class Menu extends World
 {
- private Boton_Jugar boton_jugar;
-
+    private Boton_Jugar boton_jugar;
+    private Boton_Atras atras;
     private Boton_Records record_boton;
     private Boton_Instrucciones boton_ayuda;
     /**
@@ -28,11 +28,10 @@ public class Menu extends World
        boton_jugar = new Boton_Jugar();
        record_boton =new Boton_Records();
        boton_ayuda = new Boton_Instrucciones();
-       
+              
        this.addObject(boton_jugar, 350, 125);
        this.addObject(record_boton, 350, 325);
-       this.addObject(boton_ayuda, 350, 525);
-   
+       this.addObject(boton_ayuda, 350, 525);   
     }
     
     
@@ -43,7 +42,7 @@ public class Menu extends World
           
             if(Greenfoot.mousePressed(boton_jugar))
             {
-              Greenfoot.setWorld(new Barrio());
+              Greenfoot.setWorld(new San_Sebastian());
             }
             
             /*else if(Greenfoot.mousePressed(record_boton))
@@ -57,8 +56,9 @@ public class Menu extends World
                removeObject(boton_ayuda);
                setBackground("Clouds.png");
                showText("Estas son las instrucciones", 300,300);
-               
-            }
+               atras = new Boton_Atras();
+               this.addObject(atras, 350, 525);              
+            }            
             if(Greenfoot.isKeyDown("escape") )
                {
                  Greenfoot.setWorld(new Menu());        

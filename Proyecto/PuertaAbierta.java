@@ -14,6 +14,6 @@ public class PuertaAbierta extends Puerta
      */
     public void act() 
     {
-        setImage("Residencia/PuertaCerrada.png");
+        setImage("Residencia/PuertaAbierta.png");
     }    
 }

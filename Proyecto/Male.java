@@ -8,26 +8,37 @@ import greenfoot.*;
  */
 public class Male extends Hombre
 {
+   
+    
    /**
      * Dependiendo la tecla que se oprima es el movimiento que le da al personaje
      */
     public void act() 
     {                 
+        int pasos=1;
         if( Greenfoot.isKeyDown("left") )
         {
-             walkLeft(1);            
+             walkLeft(pasos);            
         }
         if( Greenfoot.isKeyDown("right") )
         {
-            walkRight(1);            
+            walkRight(pasos);            
         }
          if( Greenfoot.isKeyDown("up") )
         {
-            walkUp(1);
+            walkUp(pasos);
         }
         if( Greenfoot.isKeyDown("down") )
         {
-             walkDown(1);
-        }    
+             walkDown(pasos);
+        }  
+        if(isTouching(PuertaAbierta.class))
+        {
+            Greenfoot.setWorld(new Montecillo_World());            
+        }
+        if(isTouching(PuertaCerrada.class))
+        {
+            Greenfoot.setWorld(new TlaxcalaWorld());            
+        }
     }    
 }
