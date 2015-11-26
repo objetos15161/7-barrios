@@ -34,6 +34,7 @@ public class Female extends Mujer
              walkDown(pasos);
              //setLocation (getX(), getY()+5);           
         }
+        
         if(isTouching(PuertaAbierta.class))
         {
             Greenfoot.setWorld(new Montecillo_World());            
@@ -41,6 +42,22 @@ public class Female extends Mujer
         if(isTouching(PuertaCerrada.class))
         {
             Greenfoot.setWorld(new TlaxcalaWorld());            
+        }        
+        if(isTouching(EscaleraAbajo.class))
+        {
+            Greenfoot.setWorld(new Sala());            
+        }        
+        if(isTouching(EscaleraArriba.class))
+        {
+            Greenfoot.setWorld(new Cuarto());            
+        }        
+        if(isTouching(Tapete2.class))
+        {
+            Greenfoot.setWorld(new San_Sebastian());            
+        }
+        if(isTouching(PuertaCasa.class))
+        {
+            Greenfoot.setWorld(new Sala());            
         }
     }    
 }

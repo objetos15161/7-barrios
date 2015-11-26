@@ -13,6 +13,7 @@ public class Mujer extends Jugador
    public Mujer mujer;
    public Hombre hombre;
    public int personaje;
+   private int p=6;
     /**
      * Se define hacia donde da los pasos y las imagenes se cambian para
      * simular que el personaje esta en movimiento
@@ -28,7 +29,7 @@ public class Mujer extends Jugador
              /*creaNivel(lvl.getValue()); 
              lvl.add(1);*/      
              personaje=2;
-             //mundo.addObject(new SanSebastian(),300,300);
+             //mundo.addObject(new SanSebastian(),100,100);
              //mundo.removeObject(this);             
              //mundo.addObject(new Female(), Greenfoot.getRandomNumber(mundo.getWidth()) ,Greenfoot.getRandomNumber(mundo.getHeight()));
              Greenfoot.setWorld(new San_Sebastian()); 
@@ -40,7 +41,7 @@ public class Mujer extends Jugador
               lvl.add(1);
            } */
            personaje=1;
-           //mundo.addObject(new SanSebastian(),300,300);          
+           //mundo.addObject(new SanSebastian(),100,100);          
            //mundo.removeObject(this);
            Greenfoot.setWorld(new San_Sebastian()); 
         }     
@@ -72,10 +73,10 @@ public class Mujer extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(3);
+            wait(p);
             setLocation(getX() + direction, getY());
             setImage(img2);
-            wait(3);
+            wait(p);
             setLocation(getX() + direction, getY());
         }
         setImage("Personajes/FemaleLeftStop.png");
@@ -86,10 +87,10 @@ public class Mujer extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(3);
+            wait(p);
             setLocation(getX() + direction, getY());
             setImage(img2);
-            wait(3);
+            wait(p);
             setLocation(getX() + direction, getY());
         }
         setImage("Personajes/FemaleRightStop.png");
@@ -100,10 +101,10 @@ public class Mujer extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(3);
+            wait(p);
             setLocation(getX() , getY() + direction);
             setImage(img2);
-            wait(3);
+            wait(p);
             setLocation(getX() , getY() + direction);
         }
         setImage("Personajes/FemaleUpStop.png");
@@ -114,10 +115,10 @@ public class Mujer extends Jugador
         for (int i=0; i<distance; i++) 
         {
             setImage(img1);
-            wait(3);
+            wait(p);
             setLocation(getX() , getY() + direction);
             setImage(img2);
-            wait(3);
+            wait(p);
             setLocation(getX() , getY() + direction);
         }
         setImage("Personajes/FemaleDownStop.png");

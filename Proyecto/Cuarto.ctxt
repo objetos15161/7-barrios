@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Cuarto()
+comment0.text=\r\nCrea\ el\ Cuarto\ donde\ aparecera\ el\ personaje\r\ny\ a\u00F1ade\ los\ objetos\ necesarios\ para\ el\ ambiente.\r\n
+comment1.params=
+comment1.target=void\ crearCuarto()
+numComments=2

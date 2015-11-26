@@ -42,7 +42,7 @@ public class Menu extends World
           
             if(Greenfoot.mousePressed(boton_jugar))
             {
-              Greenfoot.setWorld(new San_Sebastian());
+              Greenfoot.setWorld(new Cuarto());
             }
             
             /*else if(Greenfoot.mousePressed(record_boton))

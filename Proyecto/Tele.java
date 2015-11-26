@@ -1,0 +1,19 @@
+import greenfoot.*;
+
+/**
+ * Escribe una descrición de la clase Tele aquí.
+ * 
+ * @autor (tu nombre) 
+ * @versión (Un número de versión o una fecha)
+ */
+public class Tele extends Habitacion
+{
+    /**
+     * Act - hace lo que Tele quiere hacer. Este método se llama "cuando quiera" o whenever
+     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+     */
+    public void act() 
+    {
+        setImage("House/TeleMueble.png");
+    }    
+}
