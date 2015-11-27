@@ -6,14 +6,15 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Chimenea extends Escenario
+public class Chimenea extends Habitacion
 {
     /**
      * Act - do whatever the Chimenea wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {      
+    {     
+       setImage("Residencia/Chimenea1.png");
        animar();    
     }    
     
@@ -21,30 +22,30 @@ public class Chimenea extends Escenario
     {
         for (int i=0; i<100; i++) 
         {                 
-            setImage("Residencia/chimenea2.png");
+            setImage("Residencia/Chimenea2.png");
             wait(5);
-            setImage("Residencia/chimenea3.png");
+            setImage("Residencia/Chimenea3.png");
             wait(5);
-            setImage("Residencia/chimenea4.png");
+            setImage("Residencia/Chimenea4.png");
             wait(5);
-            setImage("Residencia/chimenea5.png");
+            setImage("Residencia/Chimenea5.png");
             wait(5);
-            setImage("Residencia/chimenea6.png");
+            setImage("Residencia/Chimenea6.png");
             wait(5);
-            setImage("Residencia/chimenea7.png");
+            setImage("Residencia/Chimenea7.png");
             wait(5);
-            setImage("Residencia/chimenea8.png");
+            setImage("Residencia/Chimenea8.png");
             wait(5);
-            setImage("Residencia/chimenea9.png");
+            setImage("Residencia/Chimenea9.png");
             wait(5);
-            setImage("Residencia/chimenea10.png");
+            setImage("Residencia/Chimenea10.png");
             wait(5);
-            setImage("Residencia/chimenea11.png");
+            setImage("Residencia/Chimenea11.png");
             wait(5);
-            setImage("Residencia/chimenea12.png");
+            setImage("Residencia/Chimenea12.png");
             wait(5);  
         }
-        setImage("Residencia/chimenea1.png");
+        setImage("Residencia/Chimenea1.png");
     }
     
    

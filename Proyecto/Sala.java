@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Sala aquí.
+ * Es la planta baja de la habitación del personaje
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor César Castro
+ * @versión 25/11/15
  */
 public class Sala extends World
 {
@@ -13,11 +13,8 @@ public class Sala extends World
     static private int CELL_WIDTH=20;
     
     public Counter nivel;
-    public Female mujer= new Female();
+    public Male hombre= new Male();
         
-    private Habitacion muro=new Muro();
-    private Habitacion piso=new Piso();
-    
     private Habitacion tele1=new Tele1();
     private Habitacion ventana=new Ventana();
     private Habitacion tapete2=new Tapete2();
@@ -30,10 +27,9 @@ public class Sala extends World
     private Habitacion lavamanos=new Lavamanos();
     private Habitacion refri=new Refri();
     private Habitacion barra=new Barra();
-    
-
+    private Habitacion chimenea=new Chimenea();
     /**
-     * Constructor para objetos de clase Sala.
+     * Construye los objetos en la sala, para el ambiente
      * 
      */
     public Sala()
@@ -41,32 +37,9 @@ public class Sala extends World
         // Crea un nuevo mundo de 600x400 celdas con un tamaño de celda de 1x1 pixeles.
         super(ROWS,COLS,CELL_WIDTH);
         crearSala();
-    }
-    
-     
+    }    
     private void crearSala()
-    {
-        int ren, posx=0;
-        int col, posy=0;
-        for(ren=0; ren <= ROWS ;ren++)
-        {            
-            for (col=0; col <= COLS ;col++)
-            {
-                addObject(piso,posy,posx);
-                posy++;
-            }
-            posx++;
-        }
-        
-        posx=0;
-        posy=0;
-        
-        for(ren=0; ren >= ROWS ;ren++)
-        {    
-            addObject(muro,posy,posx);
-            posx++;
-        }
-                
+    {    
         addObject(escaleraarriba, COLS-4, ROWS-18);
         addObject(alfombra, 15, 11);
         addObject(tele1, 17,1);
@@ -86,7 +59,8 @@ public class Sala extends World
         addObject(lavamanos, 1, 1);
         addObject(refri, 4, 1);
         addObject(barra, 1, 4);
+       // addObject(chimenea, 7, 2);
         
-        addObject(mujer, 13, 2);        
+        addObject(hombre, 13, 2);        
     }    
 }

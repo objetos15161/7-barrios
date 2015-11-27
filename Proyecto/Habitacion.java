@@ -16,4 +16,9 @@ public class Habitacion extends Actor
     {
         setImage("House/Barra.png");
     }    
+    
+    public void wait(int time)
+    {
+        Greenfoot.delay(time);
+    }
 }

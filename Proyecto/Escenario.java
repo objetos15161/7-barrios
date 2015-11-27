@@ -17,7 +17,7 @@ public class Escenario extends Actor
         // Add your action code here.
     }  
     
-     public void wait(int time)
+    public void wait(int time)
     {
         Greenfoot.delay(time);
     }

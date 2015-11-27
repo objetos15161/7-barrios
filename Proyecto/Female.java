@@ -53,7 +53,7 @@ public class Female extends Mujer
         }        
         if(isTouching(Tapete2.class))
         {
-            Greenfoot.setWorld(new San_Sebastian());            
+            Greenfoot.setWorld(new Calle());            
         }
         if(isTouching(PuertaCasa.class))
         {

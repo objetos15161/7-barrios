@@ -7,9 +7,7 @@ import greenfoot.*;
  * @version (10-11-15)
  */
 public class Male extends Hombre
-{
-   
-    
+{   
    /**
      * Dependiendo la tecla que se oprima es el movimiento que le da al personaje
      */
@@ -31,7 +29,25 @@ public class Male extends Hombre
         if( Greenfoot.isKeyDown("down") )
         {
              walkDown(pasos);
-        }  
+        }
+        
+        if(isTouching(Num50D.class))
+        {
+            Greenfoot.setWorld(new San_Sebastian());            
+        }
+        if(isTouching(Num50I.class))
+        {
+            Greenfoot.setWorld(new TlaxcalaWorld());            
+        }
+        if(isTouching(Num40I.class))
+        {
+            Greenfoot.setWorld(new Calle());            
+        }
+        if(isTouching(Num40D.class))
+        {
+            Greenfoot.setWorld(new Montecillo_World());            
+        }
+        
         if(isTouching(PuertaAbierta.class))
         {
             Greenfoot.setWorld(new Montecillo_World());            
@@ -39,6 +55,22 @@ public class Male extends Hombre
         if(isTouching(PuertaCerrada.class))
         {
             Greenfoot.setWorld(new TlaxcalaWorld());            
+        }        
+        if(isTouching(EscaleraAbajo.class))
+        {
+            Greenfoot.setWorld(new Sala());            
+        }        
+        if(isTouching(EscaleraArriba.class))
+        {
+            Greenfoot.setWorld(new Cuarto());            
+        }        
+        if(isTouching(Tapete2.class))
+        {
+            Greenfoot.setWorld(new Calle());            
         }
+        if(isTouching(PuertaCasa.class))
+        {
+            Greenfoot.setWorld(new Sala());            
+        }        
     }    
 }

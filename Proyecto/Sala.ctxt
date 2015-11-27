@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Sala()
-comment0.text=\r\n\ Constructor\ para\ objetos\ de\ clase\ Sala.\r\n\ \r\n
+comment0.text=\r\n\ Construye\ los\ objetos\ en\ la\ sala,\ para\ el\ ambiente\r\n\ \r\n
 comment1.params=
 comment1.target=void\ crearSala()
 numComments=2

@@ -2,4 +2,6 @@
 comment0.params=
 comment0.target=void\ act()
 comment0.text=\r\n\ Act\ -\ hace\ lo\ que\ Habitaci\u00F3n\ quiere\ hacer.\ Este\ m\u00E9todo\ se\ llama\ "cuando\ quiera"\ o\ whenever\r\n\ los\ botones\ 'Actuar\ or\ 'Ejecutar'\ son\ presionados\ en\ el\ entorno.\r\n
-numComments=1
+comment1.params=time
+comment1.target=void\ wait(int)
+numComments=2

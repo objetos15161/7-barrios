@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Escribe una descrición de la clase Cuarto aquí.
+ * Es el escenario Principal en donde aparecerá el personaje
  * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @autor César Castro
+ * @versión 25/11/15
  */
 public class Cuarto extends World
 {
@@ -13,11 +13,8 @@ public class Cuarto extends World
     static private int CELL_WIDTH=20;
     
     public Counter nivel;
-    public Female mujer= new Female();
-        
-    private Habitacion muro=new Muro();
-    private Habitacion piso=new Piso();
-    
+    public Male hombre= new Male();
+      
     private Habitacion tele=new Tele();
     private Habitacion ventana=new Ventana();
     private Habitacion cama=new Cama();
@@ -27,8 +24,7 @@ public class Cuarto extends World
     private Habitacion ordenador=new Ordenador();
     private Habitacion sillon1=new Sillon1();
     private Habitacion arbolito=new Planta();
-    private Habitacion tapete1=new Tapete1();
-    
+    private Habitacion tapete1=new Tapete1();   
 
     /**
      *Crea el Cuarto donde aparecera el personaje
@@ -42,28 +38,7 @@ public class Cuarto extends World
     }
     
     private void crearCuarto()
-    {
-        int ren, posx=0;
-        int col, posy=0;
-        for(ren=0; ren <= ROWS ;ren++)
-        {            
-            for (col=0; col <= COLS ;col++)
-            {
-                addObject(piso,posy,posx);
-                posy++;
-            }
-            posx++;
-        }
-        
-        posx=0;
-        posy=0;
-        
-        for(ren=0; ren >= ROWS ;ren++)
-        {    
-            addObject(muro,posy,posx);
-            posx++;
-        }
-                
+    {                       
         addObject(escaleraabajo, COLS-4, ROWS-18);
         addObject(alfombra, ROWS/2, COLS/2);
         addObject(tele, ROWS/2,COLS/3);
@@ -76,6 +51,6 @@ public class Cuarto extends World
         addObject(cama, 2, 7);
         addObject(tapete1, COLS-5,ROWS-18);
         
-        addObject(mujer, ROWS/2, COLS/2);        
+        addObject(hombre, ROWS/2, COLS/2);        
     }    
 }

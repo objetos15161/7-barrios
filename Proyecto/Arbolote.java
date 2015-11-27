@@ -14,6 +14,6 @@ public class Arbolote extends Arbol
      */
     public void act() 
     {
-        setImage("Exterior/Arbol.png");
+        setImage("Exterior/Arbolote.png");
     }    
 }

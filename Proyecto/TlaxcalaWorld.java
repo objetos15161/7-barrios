@@ -8,8 +8,12 @@ import greenfoot.*;
  */
 public class TlaxcalaWorld extends World
 {
+    static private final int ROWS = 24;
+    static private final int COLS = 24;
+    static private int CELL_WIDTH=20;
+
     public Counter nivel;
-    public Female mujer= new Female();
+    public Male hombre= new Male();
     /**
      * Constructor for objects of class TlaxcalaWorld.
      * 
@@ -17,10 +21,10 @@ public class TlaxcalaWorld extends World
     public TlaxcalaWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
-         nivel = new Counter("Barrio Tlaxcala: ");
+        super(ROWS,COLS,CELL_WIDTH);
+        nivel = new Counter("Barrio Tlaxcala: ");
         nivel.setValue(3);
-        addObject(nivel, 280, 10);
-        addObject(mujer, 200, 100);
+        addObject(nivel, 5, 0);
+        addObject(hombre, 12, 12);
     }
 }
