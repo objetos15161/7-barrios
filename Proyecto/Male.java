@@ -43,10 +43,10 @@ public class Male extends Hombre
         {
             Greenfoot.setWorld(new Calle());            
         }
-        if(isTouching(Num40D.class))
+        if(isTouching(Num40Ab.class))
         {
             Greenfoot.setWorld(new Montecillo_World());            
-        }
+        }        
         
         if(isTouching(PuertaAbierta.class))
         {

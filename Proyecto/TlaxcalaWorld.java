@@ -1,10 +1,10 @@
 import greenfoot.*;
 
 /**
- * Write a description of class TlaxcalaWorld here.
+ * Se agregan objetos al escenario
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author César Castro
+ * @version 27/11/15
  */
 public class TlaxcalaWorld extends World
 {
@@ -14,6 +14,21 @@ public class TlaxcalaWorld extends World
 
     public Counter nivel;
     public Male hombre= new Male();
+    
+    public Casa casa6=new Casa6();
+    public Arbol arbol1=new Arbol1();
+    public Arbol arbol2=new Arbol2();
+    public Arbol arbol3=new Arbol3();
+    public Arbol arbol4=new Arbol4();
+    public Arbol arbol5=new Arbol5();
+    
+    public Fuera banco=new Banco();
+    
+    public Fuera lampara1=new Lampara1();
+    public Fuera lampara2=new Lampara2(); 
+    
+    public Nivel letrero3=new Letrero3();    
+    
     /**
      * Constructor for objects of class TlaxcalaWorld.
      * 
@@ -24,7 +39,23 @@ public class TlaxcalaWorld extends World
         super(ROWS,COLS,CELL_WIDTH);
         nivel = new Counter("Barrio Tlaxcala: ");
         nivel.setValue(3);
+        
+        addObject(casa6, 7, 6);
+        addObject(banco, 8, 17);
+                
+        addObject(arbol2, 18, 3);
+        addObject(arbol3, 23, 2);
+               
+        addObject(hombre, 22, 11);
+        addObject(arbol4, 20, 20);
+        addObject(arbol5, 3, 13);
+        addObject(arbol1, 3, 18);
+        addObject(lampara1, 15, 20);
+        addObject(lampara2, 15, 12);  
+        
+        addObject(letrero3, 11,13);  
+        
         addObject(nivel, 5, 0);
-        addObject(hombre, 12, 12);
+        
     }
 }

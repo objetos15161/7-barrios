@@ -15,11 +15,12 @@ public class San_Sebastian extends World
     public Counter nivel;
     public Male hombre= new Male();
     
-    private Casa casa6=new Casa6();  
-    
-    private Objetos num40d=new Num40D();
+    private Casa casa6=new Casa6();
+        
     private Objetos num40i=new Num40I();
     private Objetos num40ab=new Num40Ab();
+    
+    private Nivel letrero1=new Letrero1();
     
     /**
      * Constructor for objects of class San_Sebastian.
@@ -32,17 +33,14 @@ public class San_Sebastian extends World
         nivel = new Counter("Barrio San Sebastian: ");
         nivel.setValue(1);        
 
-        addObject(casa6, 12,0); 
+        addObject(casa6, 12,0);         
         
-        addObject(num40d, 23, 11); 
         addObject(num40i, 0, 11); 
         addObject(num40ab, 12, 23); 
         
+        addObject(letrero1, 8,7);        
 
         addObject(nivel, 5, 0);
-        addObject(hombre, 2, 11);  
-        
-        
-        
+        addObject(hombre, 2, 11); 
     }
 }

@@ -8,8 +8,8 @@ import greenfoot.*;
  */
 public class Cuarto extends World
 {
-    static private final int ROWS = 20;
-    static private final int COLS = 15;
+    static private final int ROWS = 24;
+    static private final int COLS = 24;
     static private int CELL_WIDTH=20;
     
     public Counter nivel;
@@ -41,16 +41,16 @@ public class Cuarto extends World
     {                       
         addObject(escaleraabajo, COLS-4, ROWS-18);
         addObject(alfombra, ROWS/2, COLS/2);
-        addObject(tele, ROWS/2,COLS/3);
-        addObject(consola, 12,COLS/3);
-        addObject(ordenador, 1,1);
-        addObject(sillon1, 1,2);
-        addObject(ventana, ROWS/2,0);
+        addObject(tele, ROWS/2,COLS/3+1);
+        addObject(consola, 15,COLS/3+1);
+        addObject(ordenador, 1,5);
+        addObject(sillon1, 1,6);
+        addObject(ventana, ROWS/2,2);
         
         addObject(arbolito, 0,13);
-        addObject(cama, 2, 7);
+        addObject(cama, 4, COLS/2);
         addObject(tapete1, COLS-5,ROWS-18);
         
-        addObject(hombre, ROWS/2, COLS/2);        
+        addObject(hombre, 18, 6);        
     }    
 }

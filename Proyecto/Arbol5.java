@@ -14,6 +14,6 @@ public class Arbol5 extends Arbol
      */
     public void act() 
     {
-        setImage("Exterior/Arbol5.png");
+        setImage("Exterior/Arbol.png");
     }    
 }

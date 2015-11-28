@@ -14,6 +14,6 @@ public class Boton_Jugar extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+       setImage("Jugar.png");
     }    
 }

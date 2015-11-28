@@ -8,8 +8,8 @@ import greenfoot.*;
  */
 public class Sala extends World
 {
-    static private final int ROWS = 20;
-    static private final int COLS = 15;
+    static private final int ROWS = 24;
+    static private final int COLS = 24;
     static private int CELL_WIDTH=20;
     
     public Counter nivel;
@@ -41,26 +41,26 @@ public class Sala extends World
     private void crearSala()
     {    
         addObject(escaleraarriba, COLS-4, ROWS-18);
-        addObject(alfombra, 15, 11);
-        addObject(tele1, 17,1);
-        addObject(mesa, 3,ROWS/2);
-        addObject(sillon2, 1,ROWS/2);
+        addObject(alfombra, 19, 17);
+        addObject(tele1, 19,11);
+        addObject(mesa, 5,15);
+        addObject(sillon2, 3,15);
         
-        addObject(sillon1, 14,11);
-        addObject(sillon1, 15,11);
-        addObject(sillon1, 16,11);
+        addObject(sillon1, 19,16);
+        addObject(sillon1, 18,16);
+        addObject(sillon1, 20,16);
         
-        addObject(ventana, 3,0);    
+        addObject(ventana, 3,2);    
         
-        addObject(arbolito, 0,13);
-        addObject(arbolito, 19,13);
+        addObject(arbolito, 0,22);
+        addObject(arbolito, 19,22);
         
-        addObject(tapete2, ROWS/2, 14);
-        addObject(lavamanos, 1, 1);
-        addObject(refri, 4, 1);
-        addObject(barra, 1, 4);
+        addObject(tapete2, ROWS/2, COLS-1);
+        addObject(lavamanos, 1, 5);
+        addObject(refri, 6, 5);
+        addObject(barra, 1, 9);
        // addObject(chimenea, 7, 2);
         
-        addObject(hombre, 13, 2);        
+        addObject(hombre, 22, 6);        
     }    
 }

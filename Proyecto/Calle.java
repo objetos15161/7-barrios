@@ -31,6 +31,8 @@ public class Calle extends World
     private Objetos num50d=new Num50D();
     private Objetos num50i=new Num50I();
     
+    public Arbol arbol5=new Arbol5();
+    
     /**
      * Constructor for objects of class San_Sebastian.
      * 
@@ -54,7 +56,7 @@ public class Calle extends World
         
         addObject(nivel, 5, 0);
         addObject(hombre, 12, 7); 
-        //addObject(arbolote, 2,15);        
+        addObject(arbol5, 3,17);        
         addObject(casa2, 20,21);
         addObject(lampara1, 15, 13); 
         addObject(lampara2, 8, 13); 

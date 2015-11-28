@@ -8,6 +8,10 @@ import greenfoot.*;
  */
 public class Menu extends World
 {
+    static private final int ROWS = 24;
+    static private final int COLS = 24;
+    static private int CELL_WIDTH=20;    
+    
     private Boton_Jugar boton_jugar;
     private Boton_Atras atras;
     private Boton_Records record_boton;
@@ -19,7 +23,7 @@ public class Menu extends World
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(700, 650, 1);
+        super(ROWS,COLS,CELL_WIDTH);
         crearBotones();
         act();
     }
@@ -29,9 +33,9 @@ public class Menu extends World
        record_boton =new Boton_Records();
        boton_ayuda = new Boton_Instrucciones();
               
-       this.addObject(boton_jugar, 350, 125);
-       this.addObject(record_boton, 350, 325);
-       this.addObject(boton_ayuda, 350, 525);   
+       this.addObject(boton_jugar, ROWS/2, 5);
+       this.addObject(record_boton, ROWS/2, COLS/2+COLS/2-5);
+       this.addObject(boton_ayuda, ROWS/2, COLS/2);   
     }
     
     
