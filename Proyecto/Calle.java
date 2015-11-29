@@ -28,6 +28,9 @@ public class Calle extends World
     private Arbol arbolote=new Arbolote(); 
     
     private Objetos carro=new Carro();
+    private Objetos carro1=new Carro();
+    private Objetos carro2=new Carro();
+    
     private Objetos num50d=new Num50D();
     private Objetos num50i=new Num50I();
     
@@ -53,6 +56,9 @@ public class Calle extends World
         addObject(door2, 12,4);
         
         addObject(carro, 7, 9);
+        addObject(carro1, 15, 9);
+        addObject(carro2, 20, 9);
+        
         addObject(num50d, 23, 11); 
         addObject(num50i, 0, 11); 
         

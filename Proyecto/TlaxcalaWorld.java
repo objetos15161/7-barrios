@@ -23,6 +23,8 @@ public class TlaxcalaWorld extends World
     public Arbol arbol5=new Arbol5();
     
     public Fuera banco=new Banco();
+    public Fuera banco1=new Banco();
+    public Fuera banco2=new Banco();
     
     public Fuera lampara1=new Lampara1();
     public Fuera lampara2=new Lampara2(); 
@@ -42,7 +44,10 @@ public class TlaxcalaWorld extends World
         nivel.setValue(3);
         
         addObject(casa6, 7, 6);
-        addObject(banco, 8, 17);
+        
+        addObject(banco, 8, 16);
+        addObject(banco1, 8, 21);
+        addObject(banco2, 22, 17);
                 
         addObject(arbol2, 18, 3);
         addObject(arbol3, 23, 2);
