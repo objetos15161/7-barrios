@@ -34,6 +34,7 @@ public class Cuarto extends World
     {    
         // Crea un nuevo mundo de 600x400 celdas con un tamaño de celda de 1x1 pixeles.
         super(ROWS,COLS,CELL_WIDTH);
+        hombre.nivel=1;
         crearCuarto();
     }
     

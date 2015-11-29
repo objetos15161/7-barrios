@@ -38,6 +38,7 @@ public class TlaxcalaWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(ROWS,COLS,CELL_WIDTH);
         nivel = new Counter("Barrio Tlaxcala: ");
+        hombre.nivel=4;
         nivel.setValue(3);
         
         addObject(casa6, 7, 6);

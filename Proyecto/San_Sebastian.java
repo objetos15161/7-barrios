@@ -31,6 +31,8 @@ public class San_Sebastian extends World
         super(ROWS,COLS,CELL_WIDTH);
 
         nivel = new Counter("Barrio San Sebastian: ");
+        hombre.nivel=3;
+        hombre.viene=3;
         nivel.setValue(1);        
 
         addObject(casa6, 12,0);         

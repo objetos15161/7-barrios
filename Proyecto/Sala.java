@@ -36,6 +36,8 @@ public class Sala extends World
     {    
         // Crea un nuevo mundo de 600x400 celdas con un tamaño de celda de 1x1 pixeles.
         super(ROWS,COLS,CELL_WIDTH);
+        hombre.nivel=1;
+        hombre.viene=2;
         crearSala();
     }    
     private void crearSala()
@@ -60,7 +62,8 @@ public class Sala extends World
         addObject(refri, 6, 5);
         addObject(barra, 1, 9);
        // addObject(chimenea, 7, 2);
-        
-        addObject(hombre, 22, 6);        
-    }    
+      
+         addObject(hombre, 22, 6);
+   
+  }  
 }

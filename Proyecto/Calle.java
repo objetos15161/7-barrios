@@ -40,6 +40,8 @@ public class Calle extends World
     public Calle()
     {
         super(ROWS,COLS,CELL_WIDTH);
+        hombre.nivel=2;
+        hombre.viene=1;
 
         nivel = new Counter("Casa: ");
         nivel.setValue(0);        
