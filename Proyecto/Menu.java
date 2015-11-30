@@ -59,9 +59,9 @@ public class Menu extends World
                removeObject(record_boton);
                removeObject(boton_ayuda);
                setBackground("Clouds.png");
-               showText("Estas son las instrucciones", 300,300);
+               showText("Estas son las instrucciones", 13,10);
                atras = new Boton_Atras();
-               this.addObject(atras, 350, 525);              
+               this.addObject(atras, 13, 17);              
             }            
             if(Greenfoot.isKeyDown("escape") )
                {

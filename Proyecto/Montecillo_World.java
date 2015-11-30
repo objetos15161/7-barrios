@@ -42,7 +42,8 @@ public class Montecillo_World extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(ROWS,COLS,CELL_WIDTH);
         nivel = new Counter("Barrio Montecillo: ");
-        nivel.setValue(2);               
+        nivel.setValue(2);
+        hombre.nivel=5;
 
         addObject(casa5, 2, 4);
         
@@ -53,16 +54,15 @@ public class Montecillo_World extends World
         addObject(fuente1, 20, 10);
 
         addObject(arbol2, 20, 3);
-        addObject(arbol3, 20, 16);       
+        addObject(arbol3, 20, 16);  
+        addObject(letrero2, 5, 8);
 
         addObject(hombre, 11, 1);
         addObject(arbol4, 20, 20);
         addObject(arbol5, 3, 16);
         addObject(arbol1, 3, 19);
         addObject(lampara1, 8, 14);
-        addObject(lampara2, 8, 7);  
-
-        addObject(letrero2, 5, 8);
+        addObject(lampara2, 8, 7);
         addObject(carro, 16,22);       
 
         addObject(nivel, 5, 0);
