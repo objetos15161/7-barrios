@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=void\ act()
-comment1.params=time
-comment1.target=void\ wait(int)
-comment1.text=\r\n\ Define\ un\ lapso\ de\ tiempo\ para\ cambiar\ de\ imagen\r\n
-numComments=2

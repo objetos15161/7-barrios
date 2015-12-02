@@ -3,7 +3,8 @@ import greenfoot.*;
 /**
  * Escribe una descrición de la clase Calle aquí.
  * 
- * @autor (tu nombre) 
+ * @cesar4206 (Castro Pérez César Alfonso) 
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
  * @versión (Un número de versión o una fecha)
  */
 public class Calle extends World
@@ -13,28 +14,29 @@ public class Calle extends World
     static private int CELL_WIDTH=20;
 
     public Counter nivel;
-    public Male hombre= new Male();
-    public PuertaAbierta door= new  PuertaAbierta();
-
-    private Casa casa1=new Casa1();
-    private Casa casa4=new Casa4();
-    private Casa casa3=new Casa3();
-    private Casa casa2=new Casa2();
-    public PuertaCasa door2= new  PuertaCasa();
+    private Male hombre= new Male();
+    private Boton_Atras atras=new Boton_Atras();
+   
+    private Casa casa1=new Casa();
+    private Casa casa4=new Casa();
+    private Casa casa3=new Casa();
+    private Casa casa2=new Casa();
+    private PuertaCasa door2= new  PuertaCasa();
     
-    private Fuera lampara1=new Lampara1();
-    private Fuera lampara2=new Lampara2();
+    private Fuera lampara1=new Fuera();
+    private Fuera lampara2=new Fuera();
     
-    private Arbol arbolote=new Arbolote(); 
     
-    private Objetos carro=new Carro();
-    private Objetos carro1=new Carro();
-    private Objetos carro2=new Carro();
+        
+    private Objetos carro=new Objetos();
+    private Objetos carro1=new Objetos();
+    private Objetos carro2=new Objetos();
     
-    private Objetos num50d=new Num50D();
-    private Objetos num50i=new Num50I();
+    private Objetos num50d=new Objetos();
+    private Objetos num50i=new Objetos();
     
-    public Arbol arbol5=new Arbol5();
+    
+    private Arbol arbol5=new Arbol();
     
     /**
      * Constructor for objects of class San_Sebastian.
@@ -43,30 +45,45 @@ public class Calle extends World
     public Calle()
     {
         super(ROWS,COLS,CELL_WIDTH);
-        hombre.nivel=2;
-        hombre.viene=1;
+        hombre.escenario=2;
+        
 
-        nivel = new Counter("Casa: ");
+        nivel = new Counter("Calle: ");
         nivel.setValue(0);        
 
+        casa1.creaCasa(1);
         addObject(casa1, 3,1);
+        casa4.creaCasa(4);
         addObject(casa4, 21,0);
+        casa3.creaCasa(3);
         addObject(casa3, 12,1);
 
         addObject(door2, 12,4);
         
+        carro.creaObjetos(3);
         addObject(carro, 7, 9);
+        carro1.creaObjetos(3);
         addObject(carro1, 15, 9);
+        carro2.creaObjetos(3);
         addObject(carro2, 20, 9);
-        
+        num50d.creaObjetos(7);
         addObject(num50d, 23, 11); 
+        num50i.creaObjetos(5);
         addObject(num50i, 0, 11); 
         
         addObject(nivel, 5, 0);
-        addObject(hombre, 12, 7); 
+        addObject(hombre, 12, 7);
+        
+        arbol5.creaArbol(5);
         addObject(arbol5, 3,17);        
+        
+        casa2.creaCasa(2);
         addObject(casa2, 20,21);
+        
+        lampara1.creaAfuera(2);
         addObject(lampara1, 15, 13); 
+        lampara2.creaAfuera(1);
         addObject(lampara2, 8, 13); 
+        addObject(atras, 20, 2); 
     }
 }

@@ -14,6 +14,33 @@ public class Arbol extends Escenario
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        
+    }  
+    public void creaArbol(int numArbol)
+    {
+      if(numArbol==6)
+      {
+          setImage("Exterior/Arbolote.png");
+      }
+      if(numArbol==5)
+      {     
+         setImage("Exterior/Arbol.png");
+      }
+      if(numArbol==4)
+      {
+         setImage("Exterior/Arbol4.png");
+      }  
+      if(numArbol==3)
+      {
+        setImage("Exterior/Arbol3.png");
+      }    
+      if(numArbol==2)
+      {
+        setImage("Exterior/Arbol2.png");
+      }
+      if(numArbol==1)
+      {
+          setImage("Exterior/Arbol1.png");
+       }
+    }
 }

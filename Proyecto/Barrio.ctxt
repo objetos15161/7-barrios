@@ -2,12 +2,4 @@
 comment0.params=
 comment0.target=Barrio()
 comment0.text=\ \ \ \ \ \r\n
-comment1.params=
-comment1.target=void\ Inicio()
-comment2.params=
-comment2.target=void\ seleccionPersonaje()
-comment3.params=
-comment3.target=Mujer\ dimeMujer()
-comment4.params=n
-comment4.target=void\ creaNivel(int)
-numComments=5
+numComments=1

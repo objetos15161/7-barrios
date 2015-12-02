@@ -4,20 +4,12 @@ import greenfoot.*;
  * Esta clase define la distancia que recorre el personaje
  * asi como las imagenes del personaje
  * 
- * @cesar4206 (Castro Pérez César) 
+ * @cesar4206 (Castro Pérez César Alfonso) 
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
  * @version (10-11-15)
  */
 public class Hombre extends Jugador
 {
-    private Counter lvl;
-    private Counter vidas;
-    public Hombre hombre;
-    public Mujer mujer;
-    public Perro perro;
-    public Gato gato;
-    public Male male;
-    public int personaje;
-    
     int walk=1;
     int esp=7;
 
@@ -27,31 +19,7 @@ public class Hombre extends Jugador
      */
     public void act() 
     {
-        World mundo = (Barrio)getWorld();      
-        Actor mujer = getOneIntersectingObject(Mujer.class);
-        if(Greenfoot.getMouseInfo()!=null)
-        {
-            if(Greenfoot.mousePressed(this))
-            {
-                /*creaNivel(lvl.getValue()); 
-                lvl.add(1);*/
-                //mundo.removeObject(this);
-                //mundo.removeObject(mujer);
-                personaje=1;
-                //mundo.addObject(new SanSebastian(),300,300);
-                Greenfoot.setWorld(new San_Sebastian()); 
-                //mundo.addObject(new Male(), Greenfoot.getRandomNumber(mundo.getWidth()) ,Greenfoot.getRandomNumber(mundo.getHeight()));   
-            }
-            if(Greenfoot.mousePressed(mujer))
-            {
-                /*creaNivel(lvl.getValue()); 
-                lvl.add(1);*/
-                //mundo.removeObject(this);
-                personaje=2;
-                //mundo.addObject(new SanSebastian(),300,300);
-                Greenfoot.setWorld(new San_Sebastian()); 
-            }
-        }     
+     
     }
 
     public void walkLeft(int distance)

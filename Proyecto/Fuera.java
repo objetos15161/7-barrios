@@ -15,5 +15,32 @@ public class Fuera extends Escenario
     public void act() 
     {
         // Agrega tus códigos de acción aquí.
-    }    
+    }
+    public void creaAfuera(int num)
+    {
+        if(num==1)
+        {
+          setImage("Exterior/LamparaPlantas.png");//Lampara2
+        }
+        if(num==2)
+        {
+          setImage("Exterior/Lampara.png");//Lampara1
+        }
+        if(num==3)
+        {
+           setImage("Exterior/Banco.png");//banco
+        }
+        if(num==4)
+        {
+           setImage("Exterior/Fuente3.1.png");//fuente3
+        }
+        if(num==5)
+        {
+          setImage("Exterior/Fuente1.png");//fuente1
+        }
+        if(num==6)
+        {
+          setImage("Exterior/Fuente2.png");//fuente2
+        }
+    }
 }

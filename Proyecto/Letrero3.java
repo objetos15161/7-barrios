@@ -1,9 +1,10 @@
 import greenfoot.*;
-
+import javax.swing.JOptionPane;
 /**
  * Escribe una descrición de la clase Letrero3 aquí.
  * 
- * @autor (tu nombre) 
+ * @cesar4206 (Castro Pérez César Alfonso) 
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
  * @versión (Un número de versión o una fecha)
  */
 public class Letrero3 extends Nivel
@@ -15,5 +16,17 @@ public class Letrero3 extends Nivel
     public void act() 
     {
         setImage("Exterior/Letrero3.png");
+         if(isTouching(Male.class) && Greenfoot.isKeyDown("enter") )//Pregunta san sebastian
+        {
+            String inputValue = JOptionPane.showInputDialog("¿En que año se fundo el barrio de Tlaxcala?\n a) 1542 b) 1670 c) 1592");  
+            if(inputValue.equals("c") || inputValue.equals("C"))
+            {
+                String input = JOptionPane.showInputDialog("¡Correcto!\n Presiona aceptar para continuar");
+            }
+            else
+            {
+                 String input = JOptionPane.showInputDialog("Incorrecto intenta de nuevo\n Presiona aceptar para continuar");
+            }
+        }
     }    
 }

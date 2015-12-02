@@ -3,7 +3,8 @@ import greenfoot.*;
 /**
  * Write a description of class San_Sebastian here.
  * 
- * @author (your name) 
+ * @cesar4206 (Castro Pérez César Alfonso) 
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
  * @version (a version number or a date)
  */
 public class San_Sebastian extends World
@@ -13,30 +14,31 @@ public class San_Sebastian extends World
     static private int CELL_WIDTH=20;
 
     public Counter nivel;
-    public Male hombre= new Male();
+    private Boton_Atras atras=new Boton_Atras();
+    private Male hombre= new Male();
 
-    private Casa casa6=new Casa6();
+    private Casa casa6=new Casa();
 
-    private Objetos num40i=new Num40I();
-    private Objetos num40ab=new Num40Ab();
+    private Objetos num40i=new Objetos();
+    private Objetos num40ab=new Objetos();
 
     private Nivel letrero1=new Letrero1();
     
-    public Arbol arbol1=new Arbol1();
-    public Arbol arbol2=new Arbol2();
-    public Arbol arbol3=new Arbol3();
-    public Arbol arbol4=new Arbol4();
-    public Arbol arbol5=new Arbol5();
+    private Arbol arbol1=new Arbol();
+    private Arbol arbol2=new Arbol();
+    private Arbol arbol3=new Arbol();
+    private Arbol arbol4=new Arbol();
+    private Arbol arbol5=new Arbol();
 
-    public Fuera banco=new Banco();
-    public Fuera banco1=new Banco();
-    public Fuera banco2=new Banco();
+    private Fuera banco=new Fuera();
+    private Fuera banco1=new Fuera();
+    private Fuera banco2=new Fuera();
 
-    public Fuera lampara1=new Lampara1();   
-    public Fuera lampara2=new Lampara2(); 
+    private Fuera lampara1=new Fuera();   
+    private Fuera lampara2=new Fuera(); 
 
-    public Fuera fuente2=new Fuente2();
-    public Objetos carro=new Carro();
+    private Fuera fuente2=new Fuera();
+    private Objetos carro=new Objetos();
 
     /**
      * Constructor for objects of class San_Sebastian.
@@ -47,33 +49,53 @@ public class San_Sebastian extends World
         super(ROWS,COLS,CELL_WIDTH);
 
         nivel = new Counter("Barrio San Sebastian: ");
-        hombre.nivel=3;
-        hombre.viene=3;
-        nivel.setValue(1);        
-
-        addObject(casa6, 12,0);         
-        addObject(num40i, 0, 11); 
+        hombre.escenario=3;
+        
+        nivel.setValue(1);     
+        
+        casa6.creaCasa(6);
+        addObject(casa6, 12,0);
+        
+        num40i.creaObjetos(1);
+        addObject(num40i, 0, 11);
+        num40ab.creaObjetos(4);
         addObject(num40ab, 12, 23); 
+        
         addObject(letrero1, 8,7);     
         
+        banco.creaAfuera(3);
         addObject(banco, 15, 12);
+        banco1.creaAfuera(3);
         addObject(banco1, 15, 17);
+        banco2.creaAfuera(3);
         addObject(banco2, 8, 19);
-
+        
+        fuente2.creaAfuera(6);
         addObject(fuente2, 20, 10);
-
+        
+        arbol2.creaArbol(2);
         addObject(arbol2, 2, 3);
+        arbol3.creaArbol(3);
         addObject(arbol3, 20, 16);       
 
         addObject(hombre, 2, 11);
+        
+        arbol4.creaArbol(4);
         addObject(arbol4, 20, 20);
+        arbol5.creaArbol(5);
         addObject(arbol5, 3, 16);
+        arbol1.creaArbol(1);
         addObject(arbol1, 3, 19);
+        
+        lampara1.creaAfuera(2);
         addObject(lampara1, 8, 14);
+        lampara2.creaAfuera(1);
         addObject(lampara2, 15, 7);  
 
+        carro.creaObjetos(3);
         addObject(carro, 2,9);       
 
         addObject(nivel, 5, 0);
+        addObject(atras, 20, 2); 
     }
 }

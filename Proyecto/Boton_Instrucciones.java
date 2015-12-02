@@ -3,7 +3,8 @@ import greenfoot.*;
 /**
  * Write a description of class Boton_Instrucciones here.
  * 
- * @author (your name) 
+ * @cesar4206 (Castro Pérez César Alfonso) 
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
  * @version (a version number or a date)
  */
 public class Boton_Instrucciones extends Actor
