@@ -7,13 +7,11 @@ import greenfoot.*;
  * @legio8 (Maldonado Diaz Fabian Giovany)
  * @version 27/11/15
  */
-public class TlaxcalaWorld extends World
+public class TlaxcalaWorld extends Barrio
 {
     static private final int ROWS = 24;
     static private final int COLS = 24;
-    static private int CELL_WIDTH=20;
-
-    public Counter nivel;
+    private Counter nivel;
     private Male hombre= new Male();
     private Boton_Atras atras=new Boton_Atras();
     
@@ -39,8 +37,6 @@ public class TlaxcalaWorld extends World
      */
     public TlaxcalaWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(ROWS,COLS,CELL_WIDTH);
         nivel = new Counter("Barrio Tlaxcala: ");
         hombre.escenario=4;
         nivel.setValue(3);
@@ -76,6 +72,6 @@ public class TlaxcalaWorld extends World
         addObject(letrero3, 11,13);  
         
         addObject(nivel, 5, 0);
-        addObject(atras, 20, 2);         
-    }
+        addObject(atras, 20, 2);  
+            }
 }

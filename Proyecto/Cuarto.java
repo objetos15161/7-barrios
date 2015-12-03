@@ -8,12 +8,10 @@ import greenfoot.*;
  * @versión 25/11/15
  */
 public class Cuarto extends World
-{
+{  
+    static private int CELL_WIDTH=20;
     static private final int ROWS = 24;
     static private final int COLS = 24;
-    static private int CELL_WIDTH=20;
-    
-    
     private Male hombre= new Male();
     private Boton_Atras atras=new Boton_Atras();
       
@@ -34,8 +32,7 @@ public class Cuarto extends World
      */
     public Cuarto()
     {    
-        // Crea un nuevo mundo de 600x400 celdas con un tamaño de celda de 1x1 pixeles.
-        super(ROWS,COLS,CELL_WIDTH);
+        super(ROWS,COLS,CELL_WIDTH); 
         hombre.escenario=1;
         crearCuarto();
     }

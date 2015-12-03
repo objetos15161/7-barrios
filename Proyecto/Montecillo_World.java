@@ -7,19 +7,19 @@ import greenfoot.*;
  * @legio8 (Maldonado Diaz Fabian Giovany)
  * @version (a version number or a date)
  */
-public class Montecillo_World extends World
+public class Montecillo_World extends Barrio
 {
     static private final int ROWS = 24;
     static private final int COLS = 24;
     static private int CELL_WIDTH=20;
 
-    public Counter nivel;
+    private Counter nivel;
     private Male hombre= new Male();
     private Boton_Atras atras=new Boton_Atras();
 
     private Nivel letrero2=new Letrero2();
     private Casa casa5=new Casa();
-    private Arbol arbol1=new Arbol();
+    
     private Arbol arbol2=new Arbol();
     private Arbol arbol3=new Arbol();
     private Arbol arbol4=new Arbol();
@@ -41,8 +41,6 @@ public class Montecillo_World extends World
      */
     public Montecillo_World()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(ROWS,COLS,CELL_WIDTH);
         nivel = new Counter("Barrio Montecillo: ");
         nivel.setValue(2);
         hombre.escenario=5;
@@ -71,9 +69,8 @@ public class Montecillo_World extends World
         arbol4.creaArbol(4);
         addObject(arbol4, 20, 20);
         arbol5.creaArbol(5);
-        addObject(arbol5, 3, 16);
-        arbol1.creaArbol(1);
-        addObject(arbol1, 3, 19);
+        addObject(arbol5, 3, 17);
+        
         
         lampara1.creaAfuera(2);
         addObject(lampara1, 8, 14);
@@ -85,5 +82,6 @@ public class Montecillo_World extends World
 
         addObject(nivel, 5, 0);
         addObject(atras, 20, 2); 
+       
     }
 }

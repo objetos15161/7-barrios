@@ -7,13 +7,11 @@ import greenfoot.*;
  * @legio8 (Maldonado Diaz Fabian Giovany) 
  * @versión (Un número de versión o una fecha)
  */
-public class Calle extends World
+public class Calle extends Barrio
 {
     static private final int ROWS = 24;
     static private final int COLS = 24;
-    static private int CELL_WIDTH=20;
-
-    public Counter nivel;
+    private Counter nivel;
     private Male hombre= new Male();
     private Boton_Atras atras=new Boton_Atras();
    
@@ -44,7 +42,7 @@ public class Calle extends World
      */
     public Calle()
     {
-        super(ROWS,COLS,CELL_WIDTH);
+        
         hombre.escenario=2;
         
 

@@ -9,10 +9,9 @@ import greenfoot.*;
  */
 public class Sala extends World
 {
+   static private int CELL_WIDTH=20;
     static private final int ROWS = 24;
     static private final int COLS = 24;
-    static private int CELL_WIDTH=20;
-    
     
     private Male hombre= new Male();private Boton_Atras atras=new Boton_Atras();
         
@@ -38,9 +37,8 @@ public class Sala extends World
      * 
      */
     public Sala()
-    {    
-        // Crea un nuevo mundo de 600x400 celdas con un tamaño de celda de 1x1 pixeles.
-        super(ROWS,COLS,CELL_WIDTH);
+    {           
+        super(ROWS,COLS,CELL_WIDTH); 
         hombre.escenario=1;
         crearSala();
     }    
@@ -63,7 +61,7 @@ public class Sala extends World
         ventana.creaHabitacion(6);
         addObject(ventana, 3,2);    
         arbolito.creaHabitacion(10);
-        addObject(arbolito, 0,22);
+        addObject(arbolito, 0,15);
         addObject(arbolito, 19,22);
         
         addObject(tapete2, ROWS/2, COLS-1);
@@ -77,7 +75,8 @@ public class Sala extends World
        
       
         addObject(hombre, 22, 6);
-        addObject(atras, 20, 2);    
+        addObject(atras, 20, 2); 
+        
    
-  }  
+   }  
 }

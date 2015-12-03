@@ -7,13 +7,11 @@ import greenfoot.*;
  * @legio8 (Maldonado Diaz Fabian Giovany) 
  * @version (a version number or a date)
  */
-public class San_Sebastian extends World
+public class San_Sebastian extends Barrio
 {
     static private final int ROWS = 24;
     static private final int COLS = 24;
-    static private int CELL_WIDTH=20;
-
-    public Counter nivel;
+    private Counter nivel;
     private Boton_Atras atras=new Boton_Atras();
     private Male hombre= new Male();
 
@@ -24,7 +22,7 @@ public class San_Sebastian extends World
 
     private Nivel letrero1=new Letrero1();
     
-    private Arbol arbol1=new Arbol();
+    
     private Arbol arbol2=new Arbol();
     private Arbol arbol3=new Arbol();
     private Arbol arbol4=new Arbol();
@@ -46,7 +44,7 @@ public class San_Sebastian extends World
      */
     public San_Sebastian()
     {
-        super(ROWS,COLS,CELL_WIDTH);
+        
 
         nivel = new Counter("Barrio San Sebastian: ");
         hombre.escenario=3;
@@ -83,9 +81,8 @@ public class San_Sebastian extends World
         arbol4.creaArbol(4);
         addObject(arbol4, 20, 20);
         arbol5.creaArbol(5);
-        addObject(arbol5, 3, 16);
-        arbol1.creaArbol(1);
-        addObject(arbol1, 3, 19);
+        addObject(arbol5, 3, 18);
+       
         
         lampara1.creaAfuera(2);
         addObject(lampara1, 8, 14);
@@ -97,5 +94,6 @@ public class San_Sebastian extends World
 
         addObject(nivel, 5, 0);
         addObject(atras, 20, 2); 
+                
     }
 }

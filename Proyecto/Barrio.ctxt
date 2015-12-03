@@ -2,4 +2,8 @@
 comment0.params=
 comment0.target=Barrio()
 comment0.text=\ \ \ \ \ \r\n
-numComments=1
+comment1.params=
+comment1.target=Counter\ dimeVidas()
+comment2.params=
+comment2.target=void\ disminuyeVid()
+numComments=3
