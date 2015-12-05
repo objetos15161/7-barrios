@@ -39,7 +39,7 @@ public class Sala extends World
     public Sala()
     {           
         super(ROWS,COLS,CELL_WIDTH); 
-        hombre.escenario=1;
+        hombre.escenario=10;
         crearSala();
     }    
     private void crearSala()

@@ -42,8 +42,8 @@ public class Montecillo_World extends Barrio
     public Montecillo_World()
     {    
         nivel = new Counter("Barrio Montecillo: ");
-        nivel.setValue(2);
-        hombre.escenario=5;
+        nivel.setValue(3);
+        hombre.escenario=2;
 
         casa5.creaCasa(5);
         addObject(casa5, 2, 4);

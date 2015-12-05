@@ -47,7 +47,7 @@ public class San_Sebastian extends Barrio
         
 
         nivel = new Counter("Barrio San Sebastian: ");
-        hombre.escenario=3;
+        hombre.escenario=1;
         
         nivel.setValue(1);     
         

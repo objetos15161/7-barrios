@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.params=
-comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ hace\ lo\ que\ SanJuandeGuadalupe\ quiere\ hacer.\ Este\ m\u00E9todo\ se\ llama\ "cuando\ quiera"\ o\ whenever\r\n\ los\ botones\ 'Actuar\ or\ 'Ejecutar'\ son\ presionados\ en\ el\ entorno.\r\n
+comment0.target=SanJuanDeGuadalupe()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ SanJuanDeGuadalupe.\r\n\ \r\n
 numComments=1

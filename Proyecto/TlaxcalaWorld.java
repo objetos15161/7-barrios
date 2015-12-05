@@ -38,8 +38,8 @@ public class TlaxcalaWorld extends Barrio
     public TlaxcalaWorld()
     {    
         nivel = new Counter("Barrio Tlaxcala: ");
-        hombre.escenario=4;
-        nivel.setValue(3);
+        hombre.escenario=7;
+        nivel.setValue(7);
         
         casa6.creaCasa(6);
         addObject(casa6, 7, 6);

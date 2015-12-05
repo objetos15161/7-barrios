@@ -57,13 +57,16 @@ public class Male extends Hombre
   {
       int positionX=getX();
       int positionY=getY(); 
-      if(escenario==1){//limite para cuarto y sala
+      if(escenario==10)
+      {//limite para cuarto y sala
           if(positionY==3)
           {
             setLocation(positionX,positionY+1); 
           }
-        }
-      if(escenario==2){//Limites para la calle 
+      }
+      
+      if(escenario==0)
+      {//Limites para la calle 
         if((positionY==14 && positionX<=9) || (positionY==14 && positionX>=14))
         {
           setLocation(positionX,positionY-1);  
@@ -85,7 +88,9 @@ public class Male extends Hombre
           setLocation(positionX,positionY+1);   
         }
       }
-      if(escenario==3){//Limites para barrio san sebastian
+      
+      if(escenario==1)
+      {//Limites para barrio san sebastian
         if((positionY==14 && positionX<=9))
         {
           setLocation(positionX,positionY-1);  
@@ -103,7 +108,37 @@ public class Male extends Hombre
           setLocation(positionX,positionY+1);   
         }
       }
-      if(escenario==4){ //Limites nivel Barrio Tlaxcala
+      
+      if(escenario==2)
+      {//Limites para barrio Montecillo
+        if((positionY==14 && positionX<=9))
+        {
+          setLocation(positionX,positionY-1);  
+        }
+        if (positionX==14)
+        {
+          setLocation(positionX-1,positionY);  
+        }
+        if (positionY>=14 && positionX==9)
+        {
+          setLocation(positionX+1,positionY);   
+        }
+        if ((positionY==8 && positionX<=4) || (positionY==8 && positionX<=9))
+        {
+          setLocation(positionX,positionY+1);   
+        }
+        if ((positionY<=9 && positionX==10))
+        {
+          setLocation(positionX+1,positionY);   
+        }
+        if ((positionY==6 && positionX<=9))
+        {
+          setLocation(positionX,positionY+1);   
+        }
+      }
+      
+      if(escenario==7)
+      { //Limites nivel Barrio Tlaxcala
         if (positionY>=19 && positionX==14)
         {
           setLocation(positionX-1,positionY);  
@@ -132,66 +167,117 @@ public class Male extends Hombre
         {
           setLocation(positionX,positionY+1);   
         }
-        }
-      if(escenario==5){//Limites para barrio Montecillo
-        if((positionY==14 && positionX<=9))
-        {
-          setLocation(positionX,positionY-1);  
-        }
-        if (positionX==14)
-        {
-          setLocation(positionX-1,positionY);  
-        }
-        if (positionY>=14 && positionX==9)
-        {
-          setLocation(positionX+1,positionY);   
-        }
-        if ((positionY==8 && positionX<=4) || (positionY==8 && positionX<=9))
-        {
-          setLocation(positionX,positionY+1);   
-        }
-        if ((positionY<=9 && positionX==10))
-        {
-          setLocation(positionX+1,positionY);   
-        }
-        if ((positionY==6 && positionX<=9))
-        {
-          setLocation(positionX,positionY+1);   
-        }
-        }
+      }      
     }
   public void checaCambioEscenario()
   {
       int positionX=getX();
       int positionY=getY(); 
-      if(positionX==23 && escenario==2)
+      if(positionX==23 && escenario==0)
       {
          Greenfoot.setWorld(new San_Sebastian());            
       }
-      if( positionX==0 && escenario==2)
+      if( positionX==0 && escenario==0)
       {
           Greenfoot.setWorld(new TlaxcalaWorld());            
       }
-      if(positionX==0 && escenario==3)
+      if(escenario==0 && positionY==23)
+      {
+          Greenfoot.setWorld(new Centro());            
+      }
+      
+      if(positionX==0 && escenario==1)
+      {
+         Greenfoot.setWorld(new Calle());            
+      }
+      if( positionY==23 && escenario==1)
+      {
+          Greenfoot.setWorld(new Montecillo_World());            
+      }
+      
+      if(positionY==0 && escenario==2)
+      {
+          Greenfoot.setWorld(new San_Sebastian());
+      }
+      if( positionY==23 && escenario==2)
+      {
+          Greenfoot.setWorld(new SanMiguelito());            
+      }
+      if( positionX==0 && escenario==2)
+      {
+          Greenfoot.setWorld(new Centro());            
+      }
+      
+      if(positionY==0 && escenario==3)
+      {
+          Greenfoot.setWorld(new Montecillo_World());
+      }
+      if( positionX==0 && escenario==3)
+      {
+          Greenfoot.setWorld(new Santiago());            
+      }
+            
+      if(positionX==0 && escenario==4)
+      {
+          Greenfoot.setWorld(new Tequisquiapan());            
+      }
+      if(positionX==23 && escenario==4)
+      {
+          Greenfoot.setWorld(new SanMiguelito());            
+      }
+      if(positionY==0 && escenario==4)
+      {
+          Greenfoot.setWorld(new Centro());            
+      }
+      
+      if(positionX==23 && escenario==5)
+      {
+          Greenfoot.setWorld(new Santiago());            
+      }
+      if(positionY==0 && escenario==5)
+      {
+          Greenfoot.setWorld(new SanJuanDeGuadalupe());            
+      }
+      
+      if( positionX==23&& escenario==6)
+      {
+          Greenfoot.setWorld(new Centro());            
+      }      
+      if(positionY==0 && escenario==6)
+      {
+          Greenfoot.setWorld(new TlaxcalaWorld());
+      }
+      if( positionY==23&& escenario==6)
+      {
+          Greenfoot.setWorld(new Tequisquiapan());            
+      }
+      
+       if( positionY==23&& escenario==7)
+      {
+          Greenfoot.setWorld(new SanJuanDeGuadalupe());            
+      }      
+      if(positionX==23 && escenario==7)
       {
           Greenfoot.setWorld(new Calle());
       }
-      if( positionY==23&& escenario==3)
+      
+      if(positionX==0 && escenario==8)
+      {
+          Greenfoot.setWorld(new SanJuanDeGuadalupe());
+      }
+      if( positionX==23&& escenario==8)
       {
           Greenfoot.setWorld(new Montecillo_World());            
-      }
-      if(escenario==4 && positionX==23)
+      }      
+      if(positionY==0 && escenario==8)
       {
-          Greenfoot.setWorld(new Calle());            
+          Greenfoot.setWorld(new Calle());
       }
-      if(escenario==4 && positionY==23)
+      if( positionY==23&& escenario==8)
       {
-          Greenfoot.setWorld(new Montecillo_World());            
-      }
-      if(escenario==2 && positionY==23)
-      {
-          Greenfoot.setWorld(new Montecillo_World());            
-      }
+          Greenfoot.setWorld(new Santiago());            
+      }      
+      
       if(escenario==5 && positionY==0)
       {
           Greenfoot.setWorld(new Calle());            
@@ -200,6 +286,7 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new TlaxcalaWorld());            
       }
+      
       if(isTouching(EscaleraAbajo.class))
       {
           Greenfoot.setWorld(new Sala());  

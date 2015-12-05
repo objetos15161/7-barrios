@@ -41,9 +41,8 @@ public class Calle extends Barrio
      * 
      */
     public Calle()
-    {
-        
-        hombre.escenario=2;
+    {        
+        hombre.escenario=0;
         
 
         nivel = new Counter("Calle: ");

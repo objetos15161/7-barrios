@@ -33,7 +33,7 @@ public class Cuarto extends World
     public Cuarto()
     {    
         super(ROWS,COLS,CELL_WIDTH); 
-        hombre.escenario=1;
+        hombre.escenario=10;
         crearCuarto();
     }
     
