@@ -15,18 +15,14 @@ public class SanJuanDeGuadalupe extends Barrio
     private Male hombre= new Male();
     private Casa casa5=new Casa();
     private Boton_Atras atras=new Boton_Atras();
-    
-    private Fuera banco=new Fuera();
-    private Fuera banco1=new Fuera();
-    private Fuera banco2=new Fuera();
-    
+        
     private Fuera fuente1=new Fuera();
     private Arbol arbol2=new Arbol();
     private Arbol arbol3=new Arbol();
     private Arbol arbol4=new Arbol();
     private Arbol arbol5=new Arbol();
     
-    private Nivel letrero4=new Letrero1();
+    private Nivel letrero6=new Letrero6();
     
     private Fuera lampara1=new Fuera();   
     private Fuera lampara2=new Fuera(); 
@@ -43,22 +39,13 @@ public class SanJuanDeGuadalupe extends Barrio
 
         casa5.creaCasa(5);
         addObject(casa5, 2, 4);
-        
-        banco.creaAfuera(3);
-        addObject(banco, 16, 12);
-        banco1.creaAfuera(3);
-        addObject(banco1, 16, 17);
-        banco.creaAfuera(3);
-        addObject(banco2, 16, 7);
-        fuente1.creaAfuera(5);
-        addObject(fuente1, 20, 10);
-        
+               
         arbol2.creaArbol(2);
         addObject(arbol2, 20, 3);
         arbol3.creaArbol(3);
         addObject(arbol3, 20, 16); 
         
-        addObject(letrero4, 5, 8);
+        addObject(letrero6, 5, 8);
 
         addObject(hombre, 11, 1);
         
@@ -67,6 +54,8 @@ public class SanJuanDeGuadalupe extends Barrio
         arbol5.creaArbol(5);
         addObject(arbol5, 3, 17);
         
+        fuente1.creaAfuera(4);
+        addObject(fuente1, 3, 13);
         
         lampara1.creaAfuera(2);
         addObject(lampara1, 8, 14);

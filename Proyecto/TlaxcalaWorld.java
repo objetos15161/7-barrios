@@ -29,7 +29,7 @@ public class TlaxcalaWorld extends Barrio
     private Fuera lampara1=new Fuera();
     private Fuera lampara2=new Fuera(); 
     
-    private Nivel letrero3=new Letrero3();    
+    private Nivel letrero7=new Letrero7();    
     
     /**
      * Constructor for objects of class TlaxcalaWorld.
@@ -69,7 +69,7 @@ public class TlaxcalaWorld extends Barrio
         lampara2.creaAfuera(1);
         addObject(lampara2, 15, 12);  
         
-        addObject(letrero3, 11,13);  
+        addObject(letrero7, 11,13);  
         
         addObject(nivel, 5, 0);
         addObject(atras, 20, 2);  

@@ -18,20 +18,18 @@ public class SanMiguelito extends Barrio
     
     private Fuera banco=new Fuera();
     private Fuera banco1=new Fuera();
-    private Fuera banco2=new Fuera();
-    
+      
     private Fuera fuente1=new Fuera();
     private Arbol arbol2=new Arbol();
     private Arbol arbol3=new Arbol();
     private Arbol arbol4=new Arbol();
     private Arbol arbol5=new Arbol();
     
-    private Nivel letrero4=new Letrero1();
+    private Nivel letrero3=new Letrero3();
     
     private Fuera lampara1=new Fuera();   
     private Fuera lampara2=new Fuera(); 
-    private Objetos carro=new Objetos();
-
+    
     /**
      * Constructor for objects of class SanMiguelito.
      * 
@@ -43,15 +41,14 @@ public class SanMiguelito extends Barrio
         hombre.escenario=3;
 
         casa5.creaCasa(5);
-        addObject(casa5, 2, 4);
+        addObject(casa5, 2, 0);
         
         banco.creaAfuera(3);
-        addObject(banco, 16, 12);
+        addObject(banco, 15, 2);
         banco1.creaAfuera(3);
-        addObject(banco1, 16, 17);
-        banco.creaAfuera(3);
-        addObject(banco2, 16, 7);
-        fuente1.creaAfuera(5);
+        addObject(banco1, 15, 8);
+                
+        fuente1.creaAfuera(6);
         addObject(fuente1, 20, 10);
         
         arbol2.creaArbol(2);
@@ -59,7 +56,7 @@ public class SanMiguelito extends Barrio
         arbol3.creaArbol(3);
         addObject(arbol3, 20, 16); 
         
-        addObject(letrero4, 5, 8);
+        addObject(letrero3, 1, 8);
 
         addObject(hombre, 11, 1);
         
@@ -68,15 +65,11 @@ public class SanMiguelito extends Barrio
         arbol5.creaArbol(5);
         addObject(arbol5, 3, 17);
         
-        
         lampara1.creaAfuera(2);
-        addObject(lampara1, 8, 14);
+        addObject(lampara1, 8, 2);
         lampara2.creaAfuera(1);
-        addObject(lampara2, 8, 7);
-        
-        carro.creaObjetos(3);
-        addObject(carro, 16,22);       
-
+        addObject(lampara2, 8, 9);
+               
         addObject(nivel, 5, 0);
         addObject(atras, 20, 2); 
     }

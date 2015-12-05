@@ -53,5 +53,13 @@ public class Objetos extends Escenario
         {
            setImage("Exterior/50Ar.png");//Num50Ar
         }
+        if(num==10)
+        {
+            setImage("Enter.png");
+        }
+        if(num==11)
+        {
+            setImage("Flechas.png");
+        }
     }
 }

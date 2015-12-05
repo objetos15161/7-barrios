@@ -15,22 +15,18 @@ public class Santiago extends Barrio
     private Male hombre= new Male();
     private Casa casa5=new Casa();
     private Boton_Atras atras=new Boton_Atras();
-    
-    private Fuera banco=new Fuera();
-    private Fuera banco1=new Fuera();
-    private Fuera banco2=new Fuera();
-    
-    private Fuera fuente1=new Fuera();
+        
     private Arbol arbol2=new Arbol();
     private Arbol arbol3=new Arbol();
     private Arbol arbol4=new Arbol();
     private Arbol arbol5=new Arbol();
     
-    private Nivel letrero4=new Letrero1();
+    private Nivel letrero4=new Letrero4();
     
     private Fuera lampara1=new Fuera();   
     private Fuera lampara2=new Fuera(); 
     private Objetos carro=new Objetos();
+    private Objetos carro1=new Objetos();
 
     /**
      * Constructor for objects of class Santiago.
@@ -42,20 +38,11 @@ public class Santiago extends Barrio
         nivel.setValue(4);
         hombre.escenario=4;
 
-        casa5.creaCasa(5);
-        addObject(casa5, 2, 4);
-        
-        banco.creaAfuera(3);
-        addObject(banco, 16, 12);
-        banco1.creaAfuera(3);
-        addObject(banco1, 16, 17);
-        banco.creaAfuera(3);
-        addObject(banco2, 16, 7);
-        fuente1.creaAfuera(5);
-        addObject(fuente1, 20, 10);
-        
+        casa5.creaCasa(6);
+        addObject(casa5, 0, 2);
+                            
         arbol2.creaArbol(2);
-        addObject(arbol2, 20, 3);
+        addObject(arbol2, 11, 18);
         arbol3.creaArbol(3);
         addObject(arbol3, 20, 16); 
         
@@ -70,12 +57,14 @@ public class Santiago extends Barrio
         
         
         lampara1.creaAfuera(2);
-        addObject(lampara1, 8, 14);
+        addObject(lampara1, 15, 7);
         lampara2.creaAfuera(1);
         addObject(lampara2, 8, 7);
         
         carro.creaObjetos(3);
-        addObject(carro, 16,22);       
+        addObject(carro, 19,5); 
+        carro.creaObjetos(3);
+        addObject(carro1, 19,3); 
 
         addObject(nivel, 5, 0);
         addObject(atras, 20, 2); 

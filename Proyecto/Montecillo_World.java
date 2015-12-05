@@ -70,8 +70,7 @@ public class Montecillo_World extends Barrio
         addObject(arbol4, 20, 20);
         arbol5.creaArbol(5);
         addObject(arbol5, 3, 17);
-        
-        
+               
         lampara1.creaAfuera(2);
         addObject(lampara1, 8, 14);
         lampara2.creaAfuera(1);
@@ -82,6 +81,5 @@ public class Montecillo_World extends Barrio
 
         addObject(nivel, 5, 0);
         addObject(atras, 20, 2); 
-       
-    }
+       }
 }

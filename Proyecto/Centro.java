@@ -36,20 +36,20 @@ public class Centro extends Barrio
         nivel.setValue(0);
         hombre.escenario=8;
         
-        fuente1.creaAfuera(5);
+        fuente1.creaAfuera(4);
         addObject(fuente1, 12, 11);
 
         arbol2.creaArbol(2);
         addObject(arbol2, 3, 2);
         arbol3.creaArbol(3);
-        addObject(arbol3, 20, 16); 
+        addObject(arbol3, 20, 2); 
 
         addObject(letrero4, 5, 8);
 
         addObject(hombre, 11, 1);
 
         arbol4.creaArbol(4);
-        addObject(arbol4, 20, 20);
+        addObject(arbol4, 20, 17);
         arbol5.creaArbol(5);
         addObject(arbol5, 3, 17);
 

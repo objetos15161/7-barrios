@@ -17,6 +17,9 @@ public class Menu extends World
     private Boton_Atras atras;
     private Boton_Records record_boton;
     private Boton_Instrucciones boton_ayuda;
+    
+    private Objetos flechas=new Objetos();
+    private Objetos enter=new Objetos();
     /**
      * Constructor for objects of class Menu.
      * 
@@ -59,10 +62,27 @@ public class Menu extends World
                removeObject(boton_jugar);
                removeObject(record_boton);
                removeObject(boton_ayuda);
-               setBackground("Clouds.png");
-               showText("Estas son las instrucciones", 13,10);
+               setBackground("SLP.jpg");
+               
+               showText("Para Mover al personaje ", 6,3);
+               showText("se utilizan las flechas ", 6,4);
+               showText("del teclado ", 6,5);
+               flechas.creaObjetos(11);               
+               addObject(flechas, 16, 5);
+               
+               showText("Para seleccionar los letrros ", 6,7);
+               showText("se pulsa la tecla ENTER ", 6,8);
+               showText("cerca de alguno ", 6,9);               
+               enter.creaObjetos(10);               
+               addObject(enter, 16, 10);
+               
+               showText("El Objetivo del Juego es contestar las ", 13,19);
+               showText("preguntas que se hagan en cada  que se ", 13,20);
+               showText("tendra escenario, para cada pregunta ", 13,21);
+               showText("habra una pista que buscar ", 13,22);                           
+                              
                atras = new Boton_Atras();
-               this.addObject(atras, 13, 17);              
+               this.addObject(atras, 19, 1);              
             }            
             if(Greenfoot.isKeyDown("escape") )
                {

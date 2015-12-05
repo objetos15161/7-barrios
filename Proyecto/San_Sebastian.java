@@ -21,8 +21,7 @@ public class San_Sebastian extends Barrio
     private Objetos num40ab=new Objetos();
 
     private Nivel letrero1=new Letrero1();
-    
-    
+        
     private Arbol arbol2=new Arbol();
     private Arbol arbol3=new Arbol();
     private Arbol arbol4=new Arbol();
@@ -43,9 +42,7 @@ public class San_Sebastian extends Barrio
      * 
      */
     public San_Sebastian()
-    {
-        
-
+    {        
         nivel = new Counter("Barrio San Sebastian: ");
         hombre.escenario=1;
         
@@ -82,8 +79,7 @@ public class San_Sebastian extends Barrio
         addObject(arbol4, 20, 20);
         arbol5.creaArbol(5);
         addObject(arbol5, 3, 18);
-       
-        
+               
         lampara1.creaAfuera(2);
         addObject(lampara1, 8, 14);
         lampara2.creaAfuera(1);
