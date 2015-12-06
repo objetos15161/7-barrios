@@ -23,8 +23,6 @@ public class Calle extends Barrio
     
     private Fuera lampara1=new Fuera();
     private Fuera lampara2=new Fuera();
-    
-    
         
     private Objetos carro=new Objetos();
     private Objetos carro1=new Objetos();
@@ -33,17 +31,14 @@ public class Calle extends Barrio
     private Objetos num50d=new Objetos();
     private Objetos num50i=new Objetos();
     
-    
-    private Arbol arbol5=new Arbol();
-    
+    private Arbol arbol5=new Arbol();    
     /**
      * Constructor for objects of class San_Sebastian.
      * 
      */
     public Calle()
     {        
-        hombre.escenario=0;
-        
+        hombre.escenario=0;        
 
         nivel = new Counter("Calle: ");
         nivel.setValue(0);        
@@ -63,6 +58,7 @@ public class Calle extends Barrio
         addObject(carro1, 15, 9);
         carro2.creaObjetos(3);
         addObject(carro2, 20, 9);
+        
         num50d.creaObjetos(7);
         addObject(num50d, 23, 11); 
         num50i.creaObjetos(5);

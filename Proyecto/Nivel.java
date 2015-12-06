@@ -1,5 +1,5 @@
 import greenfoot.*;
-
+import javax.swing.JOptionPane;
 /**
  * Funciones que se utilizaran en las subclases
  * estas subclases contienen los niveles por los que tendra que pasar el jugador

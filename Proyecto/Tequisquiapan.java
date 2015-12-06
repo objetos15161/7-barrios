@@ -1,10 +1,9 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Tequisquiapan here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @cesar4206 (Castro Pérez César Alfonso) 
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
+ * @version (05/12/15)
  */
 public class Tequisquiapan extends Barrio
 {

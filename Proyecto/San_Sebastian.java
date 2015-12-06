@@ -1,11 +1,9 @@
 import greenfoot.*;
 
 /**
- * Write a description of class San_Sebastian here.
- * 
  * @cesar4206 (Castro Pérez César Alfonso) 
  * @legio8 (Maldonado Diaz Fabian Giovany) 
- * @version (a version number or a date)
+ * @version (05/12/15)
  */
 public class San_Sebastian extends Barrio
 {

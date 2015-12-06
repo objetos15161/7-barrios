@@ -1,10 +1,9 @@
 import greenfoot.*;
-
+import javax.swing.JOptionPane;
 /**
- * Escribe una descrición de la clase Letrero4 aquí.
- * 
- * @autor (tu nombre) 
- * @versión (Un número de versión o una fecha)
+ * @cesar4206 (Castro Pérez César Alfonso) 
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
+ * @version (05/12/15)
  */
 public class Letrero4 extends Nivel
 {
@@ -15,5 +14,20 @@ public class Letrero4 extends Nivel
     public void act() 
     {
         setImage("Exterior/Letrero4.png");
+        if(isTouching(Male.class) && Greenfoot.isKeyDown("enter") )//Pregunta SanSebastian
+        {
+            String inputValue = JOptionPane.showInputDialog("El 28 de noviembre de 1906 en la calle Comonfort se encuentra la casa donde murio\n a) Manuel Jose Othon b) Fransisco Gonzales Bocanegra c) Emiliano Zapata ");
+             if(inputValue.equals("a")|| inputValue.equals("A"))
+            {
+                String input = JOptionPane.showInputDialog("¡Correcto!\n Presiona aceptar para continuar");
+            }
+            else
+            {
+               String input = JOptionPane.showInputDialog("Incorrecto intenta de nuevo\n Presiona aceptar para continuar");
+               Barrio mundo =(Barrio) getWorld();
+               Counter vidas=mundo.dimeVidas();
+               vidas.add(-1);              
+            }
+        }  
     }    
 }

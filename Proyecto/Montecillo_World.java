@@ -1,11 +1,9 @@
 import greenfoot.*;
 
 /**
- * Write a description of class Montecillo_World here.
- * 
  * @cesar4206 (Castro Pérez César Alfonso) 
- * @legio8 (Maldonado Diaz Fabian Giovany)
- * @version (a version number or a date)
+ * @legio8 (Maldonado Diaz Fabian Giovany) 
+ * @version (05/12/15)
  */
 public class Montecillo_World extends Barrio
 {
