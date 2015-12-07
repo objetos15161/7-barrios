@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.awt.Color;
 
 /**
  * Write a description of class Menu here.
@@ -11,18 +12,22 @@ public class Menu extends World
 {
     static private final int ROWS = 24;
     static private final int COLS = 24;
-    static private int CELL_WIDTH=20;    
+    static private int CELL_WIDTH=20;
+    private Color color=Color.BLACK;
+    
+    
     
     private Boton_Jugar boton_jugar;
     private Boton_Atras atras;
-    private Boton_Records record_boton;
+    private Creditos creditos;
     private Boton_Instrucciones boton_ayuda;
+    
     
     private Objetos flechas=new Objetos();
     private Objetos enter=new Objetos();
     /**
      * Constructor for objects of class Menu.
-     * 
+     * Se crea el Menu del juego.
      */
     public Menu()
     {    
@@ -31,38 +36,51 @@ public class Menu extends World
         crearBotones();
         act();
     }
-    public void crearBotones()
+    public void crearBotones()//Metodo que crea los botones necesarios para el menu y los añade
     {
        boton_jugar = new Boton_Jugar();
-       record_boton =new Boton_Records();
+       creditos =new Creditos();
        boton_ayuda = new Boton_Instrucciones();
+       atras = new Boton_Atras();
               
        this.addObject(boton_jugar, ROWS/2, 5);
-       this.addObject(record_boton, ROWS/2, COLS/2+COLS/2-5);
+       this.addObject(creditos, ROWS/2, COLS/2+COLS/2-5);
        this.addObject(boton_ayuda, ROWS/2, COLS/2);   
     }
     
     
     public void act()
     {
-        if(Greenfoot.getMouseInfo()!=null)
+        if(Greenfoot.getMouseInfo()!=null)//instruccion que checa la informacion del mouse
         {
-          
-            if(Greenfoot.mousePressed(boton_jugar))
+            if(Greenfoot.mousePressed(boton_jugar))//Checa si se sio click en el boton jugar
             {
               Greenfoot.setWorld(new Cuarto());
             }
             
-            /*else if(Greenfoot.mousePressed(record_boton))
+            else 
             {
-              Greenfoot.setWorld(new WarWorld());
-            }*/
-            else if(Greenfoot.mousePressed(boton_ayuda))
+            if(Greenfoot.mousePressed(creditos))//Checa si se dio click en el boton creditos
             {
                removeObject(boton_jugar);
-               removeObject(record_boton);
+               removeObject(creditos);
                removeObject(boton_ayuda);
-               setBackground("SLP.jpg");
+                              
+               showText("Creadores del juego: ", 12,4);
+               showText("Cesar Alfonso Catro Perez ", 12,7);
+               showText("Maldonado Diaz Fabian Giovany ", 12,10);
+               showText("Pagina para resolver las preguntas: ", 8,14);
+               showText("www.agendasanluis.com", 12,16);
+               showText("/siete-barrios-san-luis-potosi ", 12,18);
+               
+               this.addObject(atras, 19, 1);  
+            }
+            else 
+            if(Greenfoot.mousePressed(boton_ayuda))//Checa si se dio click en el boton ayuda
+            {
+               removeObject(boton_jugar);
+               removeObject(creditos);
+               removeObject(boton_ayuda);              
                
                showText("Para Mover al personaje ", 6,3);
                showText("se utilizan las flechas ", 6,4);
@@ -77,18 +95,13 @@ public class Menu extends World
                addObject(enter, 16, 10);
                
                showText("El Objetivo del Juego es contestar las ", 13,19);
-               showText("preguntas que se hagan en cada  que se ", 13,20);
-               showText("tendra escenario, para cada pregunta ", 13,21);
-               showText("habra una pista que buscar ", 13,22);                           
+               showText("preguntas que se hagan en cada escenario ", 13,20);
+                                         
                               
-               atras = new Boton_Atras();
+               
                this.addObject(atras, 19, 1);              
             }            
-            if(Greenfoot.isKeyDown("escape") )
-               {
-                 Greenfoot.setWorld(new Menu());        
-               }
+          }
         }
-
     }
 }

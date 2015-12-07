@@ -33,11 +33,12 @@ public class TlaxcalaWorld extends Barrio
     
     /**
      * Constructor for objects of class TlaxcalaWorld.
-     * 
+     * Se crea el escenario del barrio Tlaxcala
      */
     public TlaxcalaWorld()
     {    
         nivel = new Counter("Barrio Tlaxcala: ");
+        
         hombre.escenario=7;
         nivel.setValue(7);
         

@@ -31,12 +31,13 @@ public class SanMiguelito extends Barrio
     
     /**
      * Constructor for objects of class SanMiguelito.
-     * 
+     * Se crea el escenario del barrio San Miguelito
      */
     public SanMiguelito()
     {
         nivel = new Counter("Barrio San Miguelito: ");
         nivel.setValue(2);
+        
         hombre.escenario=3;
 
         casa5.creaCasa(5);

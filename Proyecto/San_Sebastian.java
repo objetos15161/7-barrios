@@ -37,11 +37,12 @@ public class San_Sebastian extends Barrio
 
     /**
      * Constructor for objects of class San_Sebastian.
-     * 
+     * Se crea el escenario del barrio San Sebastian
      */
     public San_Sebastian()
     {        
         nivel = new Counter("Barrio San Sebastian: ");
+        
         hombre.escenario=1;
         
         nivel.setValue(1);     

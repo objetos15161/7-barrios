@@ -30,11 +30,12 @@ public class Tequisquiapan extends Barrio
     
     /**
      * Constructor for objects of class Tequisquiapan.
-     * 
+     * Se crea el escenario del barrio Tequisquipan
      */
     public Tequisquiapan()
     {
         nivel = new Counter("Barrio Tequisquiapan: ");
+        
         nivel.setValue(5);
         hombre.escenario=5;
 

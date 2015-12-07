@@ -25,7 +25,7 @@ public class Montecillo_World extends Barrio
 
     private Fuera banco=new Fuera();
     private Fuera banco1=new Fuera();
-    private Fuera banco2=new Fuera();
+    
 
     private Fuera lampara1=new Fuera();   
     private Fuera lampara2=new Fuera(); 
@@ -35,12 +35,13 @@ public class Montecillo_World extends Barrio
 
     /**
      * Constructor for objects of class Montecillo_World.
-     * 
+     * Se crea el escenario del barrio Montecillo
      */
     public Montecillo_World()
     {    
         nivel = new Counter("Barrio Montecillo: ");
         nivel.setValue(3);
+        
         hombre.escenario=2;
 
         casa5.creaCasa(5);
@@ -50,8 +51,6 @@ public class Montecillo_World extends Barrio
         addObject(banco, 16, 12);
         banco1.creaAfuera(3);
         addObject(banco1, 16, 17);
-        banco.creaAfuera(3);
-        addObject(banco2, 16, 7);
         fuente1.creaAfuera(5);
         addObject(fuente1, 20, 10);
         

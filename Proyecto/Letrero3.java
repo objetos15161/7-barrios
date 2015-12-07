@@ -10,22 +10,28 @@ import javax.swing.JOptionPane;
 public class Letrero3 extends Nivel
 {
     /**
-     * Act - hace lo que Letrero3 quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+      * Se hace la pregunta respectiva al barrio y se revisa si la respuesta es correcta,
+     * de lo contrario se resta una vida.
+     * Pregunta del barrio San Miguelito.
      */
     public void act() 
     {
         setImage("Exterior/Letrero3.png");
-         if(isTouching(Male.class) && Greenfoot.isKeyDown("enter") )//Pregunta san sebastian
+        //Revisa si el personaje toca el letrero y si se presiona la tecla enter para poder acceder a la pregunta.
+         if(isTouching(Male.class) && Greenfoot.isKeyDown("enter") )
         {
-            String inputValue = JOptionPane.showInputDialog("¿En que año se fundo el barrio de Tlaxcala?\n a) 1542 b) 1670 c) 1592");  
-            if(inputValue.equals("c") || inputValue.equals("C"))
-            {
-                String input = JOptionPane.showInputDialog("¡Correcto!\n Presiona aceptar para continuar");
+            //Se abre el panel para que aparesca la pregunta y sea respondida.
+            String inputValue = JOptionPane.showInputDialog("Antes del año 1830 a este barrio se le conocia como barrio de:\n a) Sma. Trinida b) San Pedro c) De los deseos");  
+            if(inputValue.equals("a") || inputValue.equals("A"))
+            {//Se revisa si la respuesta es correcta y se muestra un mensaje.
+               String input = JOptionPane.showInputDialog("¡Correcto!\n Presiona aceptar para continuar");
             }
             else
-            {
-                 String input = JOptionPane.showInputDialog("Incorrecto intenta de nuevo\n Presiona aceptar para continuar");
+            {//Si no es correcta se muestra un mensaje y se resta una vida.
+               String input = JOptionPane.showInputDialog("Incorrecto intenta de nuevo\n Presiona aceptar para continuar");
+               Barrio mundo =(Barrio) getWorld();
+               Counter vidas=mundo.dimeVidas();
+               vidas.add(-1); 
             }
         }
     }    

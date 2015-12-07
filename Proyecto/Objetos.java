@@ -8,14 +8,7 @@ import greenfoot.*;
  */
 public class Objetos extends Escenario
 {
-    /**
-     * Act - hace lo que Objetos quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
-    public void act() 
-    {
-        // Agrega tus códigos de acción aquí.
-    }
+    //Metodo que verifica segun la variable que imagen se selecciona para el objeto
     public void creaObjetos(int num){
         if(num==1)
         {

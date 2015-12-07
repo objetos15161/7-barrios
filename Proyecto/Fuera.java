@@ -8,14 +8,7 @@ import greenfoot.*;
  */
 public class Fuera extends Escenario
 {
-    /**
-     * Act - hace lo que Fuera quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
-     */
-    public void act() 
-    {
-        // Agrega tus códigos de acción aquí.
-    }
+    //Metodo que verifica segun la variable que imagen se selecciona para el objeto
     public void creaAfuera(int num)
     {
         if(num==1)

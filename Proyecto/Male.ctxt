@@ -1,13 +1,14 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-comment0.text=\r\n\ Dependiendo\ la\ tecla\ que\ se\ oprima\ es\ el\ movimiento\ que\ le\ da\ al\ personaje\r\n
+comment0.text=\r\n\ Dependiendo\ la\ tecla\ que\ se\ oprima\ es\ el\ movimiento\ que\ le\ da\ al\ personaje.\r\n\ Se\ checan\ los\ limites\ de\ cada\ escenario\ para\ que\ no\ se\ mueva\ libremente.\r\n\ Se\ checa\ cuando\ debe\ cambiar\ de\ escenario\r\n
 comment1.params=
 comment1.target=void\ mueve()
+comment1.text=\r\n\ Movimiento\ del\ jugador.\r\n
 comment2.params=
 comment2.target=void\ checaLimites()
+comment2.text=\r\n\ Se\ checan\ los\ limites\ segun\ el\ escenario\ donde\ se\ encuentre.\r\n
 comment3.params=
 comment3.target=void\ checaCambioEscenario()
-comment4.params=
-comment4.target=void\ disminuyeVidas()
-numComments=5
+comment3.text=\r\n\ Se\ checa\ cuando\ se\ debe\ cambiar\ el\ escenario.\r\n
+numComments=4

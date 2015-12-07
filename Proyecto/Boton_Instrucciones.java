@@ -15,6 +15,6 @@ public class Boton_Instrucciones extends Actor
      */
     public void act() 
     {
-        setImage("Instruccion.png");
+        setImage("Instrucciones.png");
     }    
 }

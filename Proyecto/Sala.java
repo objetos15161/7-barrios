@@ -42,7 +42,7 @@ public class Sala extends World
         hombre.escenario=10;
         crearSala();
     }    
-    private void crearSala()
+    private void crearSala()//Metodo que añade los objetos necesarios para hacer el escenario 
     {    
         addObject(escaleraarriba, COLS-4, ROWS-18);
         

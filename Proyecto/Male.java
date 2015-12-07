@@ -12,9 +12,10 @@ public class Male extends Hombre
 {   
   public int escenario=0;
   private int pasos=0;
-  public int vidas=3;
   /**
-     * Dependiendo la tecla que se oprima es el movimiento que le da al personaje
+     * Dependiendo la tecla que se oprima es el movimiento que le da al personaje.
+     * Se checan los limites de cada escenario para que no se mueva libremente.
+     * Se checa cuando debe cambiar de escenario
      */
   public void act() 
   {                     
@@ -22,38 +23,42 @@ public class Male extends Hombre
       checaLimites();
       checaCambioEscenario();
   }
-  
-  public void mueve()//movimiento del jugador
+  /**
+   * Movimiento del jugador.
+   */
+  public void mueve()
   {
      int positionX=getX();
      int positionY=getY(); 
-      if( Greenfoot.isKeyDown("left") )
+      if( Greenfoot.isKeyDown("left") )//Izquierda
      {
         setLocation(positionX-1,positionY);
         wait(5);
         walkLeft(pasos);            
      }
-     if( Greenfoot.isKeyDown("right") )
+     if( Greenfoot.isKeyDown("right") )//Derecha
      {
         setLocation(positionX+1,positionY);
         wait(5);
         walkRight(pasos);            
      }
-     if( Greenfoot.isKeyDown("up") )
+     if( Greenfoot.isKeyDown("up") )//Arriba
      {
         setLocation(positionX,positionY-1);
         wait(5);
         walkUp(pasos);
      }
-     if( Greenfoot.isKeyDown("down") )
+     if( Greenfoot.isKeyDown("down") )//Abajo
      {
         setLocation(positionX,positionY+1);
         wait(5);
         walkDown(pasos);
      }    
   }
-  
-  public void checaLimites() //Metodo que checa los limites del mapa
+  /**
+   * Se checan los limites segun el escenario donde se encuentre.
+   */
+  public void checaLimites() 
   {
       int positionX=getX();
       int positionY=getY(); 
@@ -167,12 +172,159 @@ public class Male extends Hombre
         {
           setLocation(positionX,positionY+1);   
         }
-      }      
+      } 
+       if(escenario==3)
+      { //Limites nivel Barrio SanMiguelito
+        if (positionY==8 && positionX==1)
+        {
+          setLocation(positionX,positionY+1);  
+        }
+        if (positionX==14)//izquierda
+        {
+          setLocation(positionX-1,positionY);   
+        }
+        if (positionY==9&& positionX>=7)//arriba
+        {
+          setLocation(positionX,positionY-1);   
+        }
+        if (positionY>=9 && positionX==7 )//izquierda
+        {
+          setLocation(positionX-1,positionY);   
+        }
+        if ((positionY>=3 && positionX==1)&& (positionY<=9 && positionX==2) )//derecha
+        {
+          setLocation(positionX+1,positionY);   
+        }
+        if ((positionY==3 && positionX>=2)&& (positionY==3 && positionX<=9) )//Abajo a la derecha
+        {
+          setLocation(positionX,positionY+1);   
+        }
+        if  (positionY<=3 && positionX==9) 
+        {
+          setLocation(positionX+1,positionY);   
+        }
+        if (positionY==14)
+        {
+          setLocation(positionX,positionY-1);   
+        }
+      }
+      if(escenario==4)//Santiago
+      {
+        if (positionY==14)
+        {
+          setLocation(positionX,positionY-1);   
+        }
+        if(positionY<=8 && positionX==9)
+        {
+           setLocation(positionX+1,positionY);
+        }
+        if(positionY<=8 && positionX==14)
+        {
+           setLocation(positionX-1,positionY);
+        }
+        if(positionY==8 && positionX<=9)
+        {
+           setLocation(positionX,positionY+1);
+        }
+        if(positionY==8 && positionX>=14)
+        {
+           setLocation(positionX,positionY+1);
+        }
+      }
+      if(escenario==5)//Tequisquiapan
+      {
+        if(positionY<=8 && positionX==14)
+        {
+           setLocation(positionX-1,positionY);
+        }
+        if(positionY==8 && positionX>=14)
+        {
+           setLocation(positionX,positionY+1);
+        }
+        if (positionY==14)
+        {
+          setLocation(positionX,positionY-1);   
+        }
+        if (positionX==9)
+        {
+          setLocation(positionX+1,positionY);   
+        }
+      }
+      if(escenario==8)//Centro
+      {
+        if((positionY==14 && positionX<=9) || (positionY==14 && positionX>=14))
+        {
+          setLocation(positionX,positionY-1);  
+        }
+        if (positionY>=14 && positionX==14)
+        {
+          setLocation(positionX-1,positionY);  
+        }
+        if (positionY>=14 && positionX==9)
+        {
+          setLocation(positionX+1,positionY);   
+        }
+        if ((positionY==8 && positionX<=9) || (positionY==8 && positionX>=14))
+        {
+          setLocation(positionX,positionY+1);   
+        }
+        if ((positionY==6&& positionX<=9) || (positionY==6 && positionX>=14))
+        {
+          setLocation(positionX,positionY+1);   
+        }
+        if(positionY<=8 && positionX==14)
+        {
+           setLocation(positionX-1,positionY);
+        }
+        if(positionY<=8 && positionX==9)
+        {
+           setLocation(positionX+1,positionY);
+        }
+      }
+      if(escenario==6)//San juan
+      {
+        if((positionY==14 && positionX<=9) || (positionY==14 && positionX>=14))
+        {
+          setLocation(positionX,positionY-1);  
+        }
+        if (positionY>=14 && positionX==14)
+        {
+          setLocation(positionX-1,positionY);  
+        }
+        if (positionY>=14 && positionX==9)
+        {
+          setLocation(positionX+1,positionY);   
+        }
+        if ((positionY==6&& positionX<=9) || (positionY==6 && positionX>=14))
+        {
+          setLocation(positionX,positionY+1);   
+        }
+        if(positionY<=8 && positionX==14)
+        {
+           setLocation(positionX-1,positionY);
+        }
+        if(positionY<=8 && positionX==9)
+        {
+           setLocation(positionX+1,positionY);
+        }
+        if(positionY>=14 && positionX==14)
+        {
+           setLocation(positionX-1,positionY);
+        }
+        if(positionX==4)
+        {
+           setLocation(positionX+1,positionY);
+        }
+      }
     }
+  /**
+   * Se checa cuando se debe cambiar el escenario.
+   */
   public void checaCambioEscenario()
   {
       int positionX=getX();
       int positionY=getY(); 
+      //Checa el cambio en calle
       if(positionX==23 && escenario==0)
       {
          Greenfoot.setWorld(new San_Sebastian());            
@@ -185,7 +337,7 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Centro());            
       }
-      
+      //Checa el cambio en  San Sebastian
       if(positionX==0 && escenario==1)
       {
          Greenfoot.setWorld(new Calle());            
@@ -194,7 +346,7 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Montecillo_World());            
       }
-      
+      //Checa cambio en Montecillo
       if(positionY==0 && escenario==2)
       {
           Greenfoot.setWorld(new San_Sebastian());
@@ -207,7 +359,7 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Centro());            
       }
-      
+      //Checa cambio en San Miguelito
       if(positionY==0 && escenario==3)
       {
           Greenfoot.setWorld(new Montecillo_World());
@@ -216,7 +368,7 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Santiago());            
       }
-            
+      //Checa cambio en Santiago      
       if(positionX==0 && escenario==4)
       {
           Greenfoot.setWorld(new Tequisquiapan());            
@@ -229,16 +381,16 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Centro());            
       }
-      
+      //Checa cambio en Tequisquiapan
       if(positionX==23 && escenario==5)
       {
           Greenfoot.setWorld(new Santiago());            
       }
       if(positionY==0 && escenario==5)
       {
-          Greenfoot.setWorld(new SanJuanDeGuadalupe());            
+          Greenfoot.setWorld(new SanJuan());            
       }
-      
+      //Checa cambio en San Juan
       if( positionX==23&& escenario==6)
       {
           Greenfoot.setWorld(new Centro());            
@@ -251,19 +403,19 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Tequisquiapan());            
       }
-      
+      //Checa cambio en Tlaxcala
        if( positionY==23&& escenario==7)
       {
-          Greenfoot.setWorld(new SanJuanDeGuadalupe());            
+          Greenfoot.setWorld(new SanJuan());            
       }      
       if(positionX==23 && escenario==7)
       {
           Greenfoot.setWorld(new Calle());
       }
-      
+      //Checa cambio en Centro
       if(positionX==0 && escenario==8)
       {
-          Greenfoot.setWorld(new SanJuanDeGuadalupe());
+          Greenfoot.setWorld(new SanJuan());
       }
       if( positionX==23&& escenario==8)
       {
@@ -277,16 +429,16 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Santiago());            
       }      
-      
+      //Checa cambio en Tequisquiapan
       if(escenario==5 && positionY==0)
       {
-          Greenfoot.setWorld(new Calle());            
+          Greenfoot.setWorld(new SanJuan());            
       }
       if(escenario==5 && positionX==0)
       {
           Greenfoot.setWorld(new TlaxcalaWorld());            
       }
-      
+      //Checa los cambios en cuarto, sala y para regresar de la calle a sala
       if(isTouching(EscaleraAbajo.class))
       {
           Greenfoot.setWorld(new Sala());  
@@ -303,9 +455,5 @@ public class Male extends Hombre
       {
           Greenfoot.setWorld(new Sala()); 
       }  
-  }
-  public void disminuyeVidas()
-  {
-      vidas--;
   }
 }

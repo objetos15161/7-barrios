@@ -1,5 +1,5 @@
 #BlueJ class context
 comment0.params=
 comment0.target=void\ act()
-comment0.text=\r\n\ Act\ -\ hace\ lo\ que\ Letrero4\ quiere\ hacer.\ Este\ m\u00E9todo\ se\ llama\ "cuando\ quiera"\ o\ whenever\r\n\ los\ botones\ 'Actuar\ or\ 'Ejecutar'\ son\ presionados\ en\ el\ entorno.\r\n
+comment0.text=\r\n\ Se\ hace\ la\ pregunta\ respectiva\ al\ barrio\ y\ se\ revisa\ si\ la\ respuesta\ es\ correcta,\r\n\ de\ lo\ contrario\ se\ resta\ una\ vida.\r\n\ Pregunta\ del\ barrio\ Santiago.\r\n
 numComments=1

@@ -8,21 +8,24 @@ import javax.swing.JOptionPane;
 public class Letrero4 extends Nivel
 {
     /**
-     * Act - hace lo que Letrero4 quiere hacer. Este método se llama "cuando quiera" o whenever
-     * los botones 'Actuar or 'Ejecutar' son presionados en el entorno.
+     * Se hace la pregunta respectiva al barrio y se revisa si la respuesta es correcta,
+     * de lo contrario se resta una vida.
+     * Pregunta del barrio Santiago.
      */
     public void act() 
     {
         setImage("Exterior/Letrero4.png");
-        if(isTouching(Male.class) && Greenfoot.isKeyDown("enter") )//Pregunta SanSebastian
+        //Revisa si el personaje toca el letrero y si se presiona la tecla enter para poder acceder a la pregunta.
+        if(isTouching(Male.class) && Greenfoot.isKeyDown("enter") )//Pregunta Santiago
         {
-            String inputValue = JOptionPane.showInputDialog("El 28 de noviembre de 1906 en la calle Comonfort se encuentra la casa donde murio\n a) Manuel Jose Othon b) Fransisco Gonzales Bocanegra c) Emiliano Zapata ");
+            //Se abre el panel para que aparesca la pregunta y sea respondida.
+            String inputValue = JOptionPane.showInputDialog("¿El Barrio de Santiago fue fundado en?\n a) 1592 b) 1724 c) 1815");  
              if(inputValue.equals("a")|| inputValue.equals("A"))
-            {
+            {//Se revisa si la respuesta es correcta y se muestra un mensaje.
                 String input = JOptionPane.showInputDialog("¡Correcto!\n Presiona aceptar para continuar");
             }
             else
-            {
+            {//Si no es correcta se muestra un mensaje y se resta una vida.
                String input = JOptionPane.showInputDialog("Incorrecto intenta de nuevo\n Presiona aceptar para continuar");
                Barrio mundo =(Barrio) getWorld();
                Counter vidas=mundo.dimeVidas();

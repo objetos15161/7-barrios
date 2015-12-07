@@ -29,11 +29,12 @@ public class Santiago extends Barrio
 
     /**
      * Constructor for objects of class Santiago.
-     * 
+     * Se crea el escenario del barrio Santiago
      */
     public Santiago()
     {
         nivel = new Counter("Barrio Santiago: ");
+        
         nivel.setValue(4);
         hombre.escenario=4;
 

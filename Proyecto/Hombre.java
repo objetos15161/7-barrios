@@ -13,16 +13,7 @@ public class Hombre extends Jugador
     int walk=1;
     int esp=7;
 
-    /**
-     * Se define hacia donde da los pasos y las imagenes se cambian para
-     * simular que el personaje esta en movimiento
-     */
-    public void act() 
-    {
-     
-    }
-
-    public void walkLeft(int distance)
+     public void walkLeft(int distance)
     {
         walkL(distance, -walk, "Personajes/MaleLeft1.png", "Personajes/MaleLeft2.png");
     }
@@ -41,7 +32,8 @@ public class Hombre extends Jugador
     {
         walkDown(distance, walk, "Personajes/MaleDown1.png", "Personajes/MaleDown2.png");
     }
-
+    //Los siguientes metodos son para el giro de la imagen del personaje
+    //Izquierda
     private void walkL(int distance, int direction, String img1, String img2)
     {
         for (int i=0; i<distance; i++) 
@@ -55,7 +47,7 @@ public class Hombre extends Jugador
         }
         setImage("Personajes/MaleLeftStop.png");
     }
-
+    //Derecha
     private void walkR(int distance, int direction, String img1, String img2)
     {
         for (int i=0; i<distance; i++) 
@@ -69,7 +61,7 @@ public class Hombre extends Jugador
         }
         setImage("Personajes/MaleRightStop.png");
     }
-
+    //Arriba
     private void walkUp(int distance, int direction, String img1, String img2)
     {
         for (int i=0; i<distance; i++) 
@@ -83,7 +75,7 @@ public class Hombre extends Jugador
         }
         setImage("Personajes/MaleUpStop.png");
     }
-
+    //Abajo
     private void walkDown(int distance, int direction, String img1, String img2)
     {
         for (int i=0; i<distance; i++) 

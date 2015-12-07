@@ -34,10 +34,11 @@ public class Calle extends Barrio
     private Arbol arbol5=new Arbol();    
     /**
      * Constructor for objects of class San_Sebastian.
-     * 
+     * Se crea el escenario de la calle
      */
     public Calle()
     {        
+        
         hombre.escenario=0;        
 
         nivel = new Counter("Calle: ");

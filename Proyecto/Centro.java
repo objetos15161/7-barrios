@@ -27,12 +27,13 @@ public class Centro extends Barrio
    
     /**
      * Constructor for objects of class Centro.
-     * 
+     * Se crea el escenario del Centro
      */
     public Centro()
     {
         nivel = new Counter("Centro: ");
         nivel.setValue(0);
+        
         hombre.escenario=8;
         
         fuente1.creaAfuera(4);
